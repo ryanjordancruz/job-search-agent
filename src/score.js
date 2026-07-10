@@ -173,6 +173,53 @@ export function detectStateExclusion(description, candidateStateAbbr) {
   return { excluded: false, excludedStates: [] };
 }
 
+// Some postings mention "remote" only as part of a split onsite/remote
+// schedule — e.g. "3 Days Onsite - 2 day Remote in Columbia SC" or a title
+// suffix like "(Partial Remote)" — which the plain remoteTerms match can't
+// tell apart from genuine full remote work. Caught these in the wild: postings
+// that read as clean remote matches but were actually hybrid roles hundreds
+// of miles away.
+const HYBRID_PHRASES = ["hybrid", "partial remote", "partially remote"];
+const DAY_SCHEDULE_PATTERN = /\d+\s*days?\s*(?:onsite|on-site|in[\s-]office|in\s+the\s+office|remote)\b/i;
+
+export function detectHybridSchedule(title, description) {
+  const text = `${norm(title)} ${norm(description)}`;
+  if (HYBRID_PHRASES.some((p) => containsTerm(text, p))) return true;
+  return DAY_SCHEDULE_PATTERN.test(text);
+}
+
+const STATE_NAMES = {
+  alabama: "AL", alaska: "AK", arizona: "AZ", arkansas: "AR", california: "CA",
+  colorado: "CO", connecticut: "CT", delaware: "DE", florida: "FL", georgia: "GA",
+  hawaii: "HI", idaho: "ID", illinois: "IL", indiana: "IN", iowa: "IA",
+  kansas: "KS", kentucky: "KY", louisiana: "LA", maine: "ME", maryland: "MD",
+  massachusetts: "MA", michigan: "MI", minnesota: "MN", mississippi: "MS",
+  missouri: "MO", montana: "MT", nebraska: "NE", nevada: "NV",
+  "new hampshire": "NH", "new jersey": "NJ", "new mexico": "NM", "new york": "NY",
+  "north carolina": "NC", "north dakota": "ND", ohio: "OH", oklahoma: "OK",
+  oregon: "OR", pennsylvania: "PA", "rhode island": "RI", "south carolina": "SC",
+  "south dakota": "SD", tennessee: "TN", texas: "TX", utah: "UT", vermont: "VT",
+  virginia: "VA", washington: "WA", "west virginia": "WV", wisconsin: "WI",
+  wyoming: "WY",
+};
+
+// "Remote" postings from staffing agencies sometimes still require the
+// candidate to already live in a specific state (e.g. "Candidate MUST be a
+// SC resident. No relocation allowed.") — a hard disqualifier distinct from
+// the explicit excluded-states list above, since here only ONE state is
+// acceptable rather than a barred list.
+const RESIDENCY_PATTERN = /must be an? ([a-z .]+?) resident/i;
+
+export function detectResidencyRequirement(description, candidateStateAbbr) {
+  const text = norm(description);
+  const m = RESIDENCY_PATTERN.exec(text);
+  if (!m) return { required: false, requiredState: null, matchesCandidate: true };
+  const token = m[1].trim();
+  const state = STATE_ABBR_SET.has(token.toUpperCase()) ? token.toUpperCase() : STATE_NAMES[token] ?? null;
+  if (!state) return { required: false, requiredState: null, matchesCandidate: true };
+  return { required: true, requiredState: state, matchesCandidate: state === candidateStateAbbr.toUpperCase() };
+}
+
 export function scorePosting(posting, profile) {
   const title = norm(posting.title);
   const desc = norm(posting.description);
@@ -199,6 +246,17 @@ export function scorePosting(posting, profile) {
         flags: [`Excluded: posting bars candidates in ${profile.stateAbbreviation} (excluded states: ${stateExclusion.excludedStates.join(", ")})`],
       };
     }
+
+    // Hard exclude: posting requires residency in a specific state that
+    // isn't the candidate's, regardless of any "remote" language elsewhere.
+    const residency = detectResidencyRequirement(posting.description, profile.stateAbbreviation);
+    if (residency.required && !residency.matchesCandidate) {
+      return {
+        score: -1,
+        matchedSkills: [],
+        flags: [`Excluded: posting requires ${residency.requiredState} residency (candidate is in ${profile.stateAbbreviation})`],
+      };
+    }
   }
 
   // Location gate: remote postings stay eligible nationwide, but anything
@@ -215,7 +273,7 @@ export function scorePosting(posting, profile) {
   // remote position" in the text, not the title/location fields. Guard
   // against negation ("not remote", "no remote work available") so a denial
   // doesn't get read as a confirmation.
-  const isRemote = remoteOk && remoteTerms.some((t) => {
+  const rawRemoteMatch = remoteOk && remoteTerms.some((t) => {
     if (containsTerm(loc, t) || containsTerm(title, t)) return true;
     const re = new RegExp(`\\b${escapeRegex(t)}\\b`, "i");
     const m = re.exec(desc);
@@ -223,13 +281,18 @@ export function scorePosting(posting, profile) {
     const before = desc.slice(Math.max(0, m.index - 20), m.index);
     return !/\b(not|no|non-|isn't|won't be|without)\s*$/.test(before);
   });
+  // A "remote" mention paired with hybrid/day-count schedule language isn't
+  // full remote work — unless the posting is also local, where a hybrid
+  // schedule is still workable in person.
+  const hybridSchedule = detectHybridSchedule(title, desc);
+  const isRemote = rawRemoteMatch && !(hybridSchedule && !isMetro);
 
   if (!isRemote && !isMetro) {
-    return {
-      score: -1,
-      matchedSkills: [],
-      flags: [`Excluded: not remote and outside ${onsiteRadiusMiles}-mile radius of ${onsiteRadiusCenter} (location: ${posting.location || "unknown"})`],
-    };
+    const reason =
+      rawRemoteMatch && hybridSchedule
+        ? `Excluded: hybrid/partial-remote schedule outside ${onsiteRadiusMiles}-mile radius of ${onsiteRadiusCenter} (location: ${posting.location || "unknown"})`
+        : `Excluded: not remote and outside ${onsiteRadiusMiles}-mile radius of ${onsiteRadiusCenter} (location: ${posting.location || "unknown"})`;
+    return { score: -1, matchedSkills: [], flags: [reason] };
   }
 
   if (isMetro) {
