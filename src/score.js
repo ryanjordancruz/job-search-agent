@@ -42,6 +42,10 @@ export function extractExperienceRequirements(description) {
     new RegExp(`at\\s+least\\s+${NUM}\\s+years?`, "g"),
     // bare "N years' experience" / "N years of experience" with no qualifier word
     new RegExp(`${NUM}\\s+years?['’]?\\s*(?:of\\s+)?experience`, "g"),
+    // bare "N years with/in/managing/working X" — e.g. "7 years with vulnerability
+    // assessments" — no "+" or range, and doesn't end in the word "experience",
+    // so none of the patterns above would otherwise catch it.
+    new RegExp(`${NUM}\\s+years?['’]?\\s+(?:with|in|of|managing|working|leading|supporting|hands-on|hands on)\\b`, "g"),
   ];
   const requirements = [];
   for (const re of patterns) {
