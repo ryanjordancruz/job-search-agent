@@ -197,6 +197,48 @@ export function scorePosting(posting, profile) {
     }
   }
 
+  // Location gate: remote postings stay eligible nationwide, but anything
+  // not explicitly remote is assumed onsite/hybrid and must fall within the
+  // configured radius of the candidate's home base — otherwise it's a hard
+  // exclude, not just a deprioritization, since an onsite/hybrid role 400+
+  // miles away isn't something the candidate can actually take.
+  const loc = norm(posting.location);
+  const { metroTerms, remoteTerms, remoteOk, onsiteRadiusMiles, onsiteRadiusCenter } = profile.location;
+
+  const isMetro = metroTerms.some((t) => containsTerm(loc, t));
+  // Check title and location first (e.g. "(Remote)" in the title), then fall
+  // back to the description body — many postings only state "this is a fully
+  // remote position" in the text, not the title/location fields. Guard
+  // against negation ("not remote", "no remote work available") so a denial
+  // doesn't get read as a confirmation.
+  const isRemote = remoteOk && remoteTerms.some((t) => {
+    if (containsTerm(loc, t) || containsTerm(title, t)) return true;
+    const re = new RegExp(`\\b${escapeRegex(t)}\\b`, "i");
+    const m = re.exec(desc);
+    if (!m) return false;
+    const before = desc.slice(Math.max(0, m.index - 20), m.index);
+    return !/\b(not|no|non-|isn't|won't be|without)\s*$/.test(before);
+  });
+
+  if (!isRemote && !isMetro) {
+    return {
+      score: -1,
+      matchedSkills: [],
+      flags: [`Excluded: not remote and outside ${onsiteRadiusMiles}-mile radius of ${onsiteRadiusCenter} (location: ${posting.location || "unknown"})`],
+    };
+  }
+
+  if (isMetro) {
+    score += 20;
+    flags.push(`Within ${onsiteRadiusMiles} miles of ${onsiteRadiusCenter}`);
+  } else if (isRemote) {
+    score += 15;
+    flags.push("Remote-eligible");
+  }
+  if (isMetro && isRemote) {
+    flags.push("Also remote-eligible");
+  }
+
   // Title match
   const titleHit = profile.targetTitles.find((t) => title.includes(t.toLowerCase()));
   const titleRelevant = Boolean(titleHit) || TITLE_RELEVANCE_TERMS.some((t) => containsTerm(title, t));
@@ -241,35 +283,6 @@ export function scorePosting(posting, profile) {
   if (highReqCount >= 3) {
     score -= 15;
     flags.push(`Lists ${highReqCount} separate 2+ year technology requirements — reads like a senior/specialist role regardless of title`);
-  }
-
-  // Location: tiered so in-state and remote postings both stay visible and
-  // ranked sensibly, instead of a single "Las Vegas, NV" substring check
-  // that misses Adzuna's city/county-only location strings (e.g. "Henderson,
-  // Clark County" never contains "Las Vegas" or "Nevada" as text).
-  const loc = norm(posting.location);
-  const { metroTerms, stateTerms, remoteTerms, remoteOk } = profile.location;
-
-  const isMetro = metroTerms.some((t) => containsTerm(loc, t));
-  // Check title too — remote is often only stated in the title (e.g. "(Remote)"),
-  // not in the location field.
-  const isRemote = remoteOk && remoteTerms.some((t) => containsTerm(loc, t) || containsTerm(title, t));
-  const isState = !isMetro && stateTerms.some((t) => containsTerm(loc, t));
-
-  if (isMetro) {
-    score += 20;
-    flags.push("Las Vegas metro area");
-  } else if (isRemote) {
-    score += 15;
-    flags.push("Remote-eligible");
-  } else if (isState) {
-    score += 8;
-    flags.push(`Elsewhere in Nevada: ${posting.location}`);
-  } else if (loc) {
-    flags.push(`Location: ${posting.location}`);
-  }
-  if (isMetro && isRemote) {
-    flags.push("Also remote-eligible");
   }
 
   // Entry-level language bonus

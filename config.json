@@ -15,15 +15,17 @@
       "Incident Response Analyst"
     ],
     "location": {
+      "onsiteRadiusMiles": 20,
+      "onsiteRadiusCenter": "Enterprise, Las Vegas, NV",
       "metroTerms": [
         "las vegas", "henderson", "paradise", "spring valley",
         "enterprise", "sunrise manor", "north las vegas", "summerlin",
-        "winchester", "whitney", "indian springs", "nellis afb",
-        "nellis air force base", "mesquite nv", "blue diamond"
+        "winchester", "whitney", "blue diamond", "sloan"
       ],
       "stateTerms": [
         "nevada", "nv", "reno", "sparks", "carson city",
-        "washoe county", "carson mall", "elko", "boulder city"
+        "washoe county", "carson mall", "elko", "boulder city",
+        "indian springs", "nellis afb", "nellis air force base", "mesquite"
       ],
       "remoteTerms": ["remote", "work from home", "telework", "anywhere in the u.s"],
       "remoteOk": true
