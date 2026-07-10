@@ -1,0 +1,10 @@
+{
+  "name": "job-search-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Discovers and ranks job postings against Ryan Cruz's resume profile. Does not auto-submit anything.",
+  "scripts": {
+    "search": "node --env-file=.env src/search.js"
+  }
+}

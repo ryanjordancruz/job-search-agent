@@ -1,0 +1,69 @@
+{
+  "candidate": {
+    "name": "Ryan Cruz",
+    "resumeReference": "C:\\Users\\ryan\\OneDrive\\Desktop\\Resumes\\Cybersecurity\\2026 Cybersecurity Analyst Resume - Ryan Cruz.docx",
+    "targetTitles": [
+      "Security Analyst",
+      "SOC Analyst",
+      "Cybersecurity Analyst",
+      "Information Security Analyst",
+      "IT Security Analyst",
+      "Security Operations Analyst",
+      "Junior Security Analyst",
+      "Vulnerability Analyst",
+      "Incident Response Analyst"
+    ],
+    "location": {
+      "metroTerms": [
+        "las vegas", "henderson", "paradise", "spring valley",
+        "enterprise", "sunrise manor", "north las vegas", "summerlin",
+        "winchester", "whitney", "clark county", "clark cty"
+      ],
+      "stateTerms": [
+        "nevada", "nv", "reno", "sparks", "carson city",
+        "washoe county", "carson mall", "elko", "boulder city"
+      ],
+      "remoteTerms": ["remote", "work from home", "telework", "anywhere in the u.s"],
+      "remoteOk": true
+    },
+    "maxYearsExperienceComfortable": 2,
+    "certifications": ["CompTIA Security+", "Security+", "SY0-701"],
+    "skills": [
+      "SIEM", "Wazuh", "Splunk", "Chronicle", "Chronicle SIEM",
+      "Nmap", "OpenVAS", "Wireshark", "vulnerability scanning",
+      "vulnerability management", "incident response", "log analysis",
+      "network security", "network monitoring", "TCP/IP", "DNS",
+      "OSI model", "firewall", "IAM", "identity and access management",
+      "MFA", "two-factor authentication", "endpoint hardening",
+      "endpoint detection", "EDR", "NIST", "ISO 27001", "OWASP",
+      "Python", "Bash", "Proxmox", "virtualization", "MITRE ATT&CK",
+      "CVSS", "risk assessment", "penetration testing", "packet capture",
+      "SCA", "security compliance", "threat detection"
+    ],
+    "excludeIfTitleContains": [
+      "Senior", "Sr", "Staff", "Principal", "Manager", "Director",
+      "Lead", "VP", "Vice President", "Head of",
+      "Officer", "Guard", "Loss Prevention", "Unarmed", "Armed",
+      "Dispatcher", "Patrol"
+    ]
+  },
+  "search": {
+    "queries": [
+      "security analyst",
+      "SOC analyst",
+      "cybersecurity analyst",
+      "vulnerability analyst"
+    ],
+    "queryLocations": ["Las Vegas, NV", "Nevada", "Remote"],
+    "adzuna": {
+      "country": "us",
+      "resultsPerQuery": 30,
+      "maxDaysOld": 21
+    },
+    "usajobs": {
+      "resultsPerQuery": 30
+    },
+    "greenhouseBoards": [],
+    "leverBoards": []
+  }
+}
