@@ -42,6 +42,64 @@ const TITLE_RELEVANCE_TERMS = [
   "infosec", "information assurance", "incident response",
 ];
 
+const CLEARANCE_TERMS = [
+  "security clearance", "ts/sci", "top secret", "secret clearance",
+  "public trust", "clearable", "dod clearance", "government clearance",
+  "clearance",
+];
+
+// Cues that the posting wants an active/current clearance already in hand.
+const ACTIVE_REQUIRED_CUES = [
+  "active", "current", "currently hold", "currently possess",
+  "must possess", "must hold", "must have an", "in possession of",
+];
+
+// Cues that the posting is open to candidates without one yet.
+const OBTAIN_CUES = [
+  "obtain", "eligib", "willing", "able to acquire", "acquire a clearance",
+  "ability to pass", "capable of obtaining",
+];
+
+// Looks for "clearance" mentions across the title AND description (Adzuna's
+// description field is often truncated and drops the clearance language even
+// when the title carries a "with Security Clearance" suffix — a standard
+// defense-contractor listing convention) and classifies by nearby language:
+// requiring one already active vs. being open to candidates willing/eligible
+// to obtain one. A posting can only be penalized for the former.
+export function detectClearanceRequirement(title, description) {
+  const text = `${norm(title)} ${norm(description)}`;
+  const mentioned = CLEARANCE_TERMS.some((t) => containsTerm(text, t));
+  if (!mentioned) {
+    return { mentioned: false, requiresActive: false, opennessToObtain: false };
+  }
+
+  const windowRadius = 60;
+  let opennessToObtain = false;
+  let sawActiveCue = false;
+
+  const re = /clearance/g;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    const start = Math.max(0, m.index - windowRadius);
+    const end = Math.min(text.length, m.index + windowRadius);
+    const window = text.slice(start, end);
+    if (OBTAIN_CUES.some((c) => window.includes(c))) opennessToObtain = true;
+    if (ACTIVE_REQUIRED_CUES.some((c) => window.includes(c))) sawActiveCue = true;
+  }
+
+  // "Must be willing to obtain an active clearance" trips both cue lists —
+  // openness wins, since the posting is explicitly not requiring one in hand.
+  // A bare, unqualified mention (e.g. a title's "with Security Clearance"
+  // suffix with no clarifying language anywhere) defaults to "requires
+  // active": in practice, postings open to candidates without one always say
+  // so explicitly, so silence is the employer's default, not an exception.
+  return {
+    mentioned: true,
+    requiresActive: !opennessToObtain,
+    opennessToObtain,
+  };
+}
+
 export function scorePosting(posting, profile) {
   const title = norm(posting.title);
   const desc = norm(posting.description);
@@ -123,6 +181,17 @@ export function scorePosting(posting, profile) {
   if (/entry.level|entry level|recent grad|no experience necessary/.test(desc)) {
     score += 10;
     flags.push("Posting explicitly welcomes entry-level candidates");
+  }
+
+  // Security clearance: only penalize when an active/current clearance is
+  // actually required. Postings explicitly open to candidates willing or
+  // eligible to obtain one aren't blockers and shouldn't be downranked.
+  const clearance = detectClearanceRequirement(posting.title, desc);
+  if (clearance.requiresActive) {
+    score -= 25;
+    flags.push("Requires an active security clearance — likely a blocker without one");
+  } else if (clearance.opennessToObtain) {
+    flags.push("Mentions clearance, but open to candidates willing/eligible to obtain one");
   }
 
   // Title relevance gate: don't let skill/cert keyword noise in the
