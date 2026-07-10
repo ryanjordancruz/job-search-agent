@@ -13,24 +13,53 @@ function containsTerm(haystack, term) {
   return new RegExp(`\\b${escaped}\\b`, "i").test(haystack);
 }
 
-// Looks for patterns like "3+ years", "5-7 years", "minimum of 2 years"
-export function extractMinYearsRequired(description) {
+const NUMBER_WORDS = {
+  one: 1, two: 2, three: 3, four: 4, five: 5,
+  six: 6, seven: 7, eight: 8, nine: 9, ten: 10,
+};
+// Matches a digit ("5") or a spelled-out number word ("five") — postings
+// mix both freely, especially for single-digit requirements.
+const NUM = `(\\d{1,2}|${Object.keys(NUMBER_WORDS).join("|")})`;
+
+function toYears(numToken) {
+  const n = Number(numToken);
+  if (!Number.isNaN(n)) return n;
+  return NUMBER_WORDS[numToken] ?? null;
+}
+
+// Looks for patterns like "3+ years", "5-7 years", "minimum of 2 years",
+// "five years' experience" and returns every distinct requirement found
+// (deduped by position), not just one number. Postings routinely stack
+// several of these — "5 years AD, 3 years Entra ID, 1 year PAM" — and
+// they're a checklist, not alternatives, so the real bar is the highest
+// one, not the lowest.
+export function extractExperienceRequirements(description) {
   const text = norm(description);
   const patterns = [
-    /(\d{1,2})\s*\+\s*years?/g,
-    /(\d{1,2})\s*-\s*\d{1,2}\s*years?/g,
-    /minimum\s+of\s+(\d{1,2})\s+years?/g,
-    /at\s+least\s+(\d{1,2})\s+years?/g,
+    new RegExp(`${NUM}\\s*\\+\\s*years?`, "g"),
+    new RegExp(`${NUM}\\s*-\\s*(?:\\d{1,2}|${Object.keys(NUMBER_WORDS).join("|")})\\s*years?`, "g"),
+    new RegExp(`minimum\\s+of\\s+${NUM}\\s+years?`, "g"),
+    new RegExp(`at\\s+least\\s+${NUM}\\s+years?`, "g"),
+    // bare "N years' experience" / "N years of experience" with no qualifier word
+    new RegExp(`${NUM}\\s+years?['’]?\\s*(?:of\\s+)?experience`, "g"),
   ];
-  let min = null;
+  const requirements = [];
   for (const re of patterns) {
     let m;
     while ((m = re.exec(text)) !== null) {
-      const n = Number(m[1]);
-      if (!Number.isNaN(n) && (min === null || n < min)) min = n;
+      const n = toYears(m[1]);
+      if (n === null) continue;
+      // dedupe overlapping matches from different patterns describing the
+      // same requirement (e.g. "minimum of" and the bare "N years experience"
+      // pattern both matching "a minimum of five years' experience...", just
+      // anchored at different offsets within the same phrase)
+      if (requirements.some((r) => Math.abs(r.index - m.index) < 20)) continue;
+      const start = Math.max(0, m.index - 45);
+      const end = Math.min(text.length, m.index + m[0].length + 15);
+      requirements.push({ years: n, index: m.index, context: text.slice(start, end).trim() });
     }
   }
-  return min;
+  return requirements.sort((a, b) => a.index - b.index);
 }
 
 // Broad "is this even a security-flavored role" check, independent of the
@@ -134,18 +163,32 @@ export function scorePosting(posting, profile) {
   const certHit = profile.certifications.some((c) => containsTerm(combined, c));
   if (certHit) score += 10;
 
-  // Experience requirement
-  const minYears = extractMinYearsRequired(desc);
-  if (minYears === null) {
+  // Experience requirement: use the HIGHEST stacked requirement, not the
+  // lowest. A posting listing "5 years AD, 3 years Entra ID, 1 year PAM"
+  // requires all of them, not just the easiest one — scoring off the min
+  // would rank it as entry-friendly, which is exactly backwards.
+  const experienceReqs = extractExperienceRequirements(desc);
+  const maxYears = experienceReqs.length ? Math.max(...experienceReqs.map((r) => r.years)) : null;
+  const highReqCount = experienceReqs.filter((r) => r.years >= 2).length;
+
+  if (maxYears === null) {
     score += 5; // no explicit years requirement found — neutral/slightly favorable
-  } else if (minYears <= profile.maxYearsExperienceComfortable) {
+  } else if (maxYears <= profile.maxYearsExperienceComfortable) {
     score += 15;
-  } else if (minYears <= profile.maxYearsExperienceComfortable + 2) {
+  } else if (maxYears <= profile.maxYearsExperienceComfortable + 2) {
     score += 0;
-    flags.push(`Requires ~${minYears}+ years — a stretch, but worth a look`);
+    flags.push(`Requires ~${maxYears}+ years — a stretch, but worth a look`);
   } else {
     score -= 20;
-    flags.push(`Requires ${minYears}+ years — likely not a fit yet`);
+    flags.push(`Requires ${maxYears}+ years — likely not a fit yet`);
+  }
+
+  // Multiple stacked multi-year requirements is a specialist/senior-role
+  // signature on its own, even when nothing in the title says so and even
+  // when the single highest number isn't extreme.
+  if (highReqCount >= 3) {
+    score -= 15;
+    flags.push(`Lists ${highReqCount} separate 2+ year technology requirements — reads like a senior/specialist role regardless of title`);
   }
 
   // Location: tiered so in-state and remote postings both stay visible and
