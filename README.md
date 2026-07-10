@@ -10,6 +10,8 @@ Auto-submitting applications is high-risk and hard to reverse: a bad match or a 
 
 - **Adzuna** — broad job aggregator, free API tier.
 - **USAJobs** — federal government postings, free API.
+- **Jooble** — broad job aggregator, free API tier.
+- **Remotive** — remote-only listings, free, no API key required. Queried once per search term (not per location) since every listing is already remote.
 - **Greenhouse / Lever** — no API key needed, but only searches specific companies' boards you add to `config.json` (`search.greenhouseBoards`, `search.leverBoards`). Find a company's board token/site from their careers page URL, e.g. `boards.greenhouse.io/<token>` or `jobs.lever.co/<site>`.
 
 LinkedIn and Indeed are deliberately excluded — both prohibit automated scraping in their terms of service and can flag or suspend accounts for bot-like activity.
@@ -19,6 +21,8 @@ LinkedIn and Indeed are deliberately excluded — both prohibit automated scrapi
 1. Get free API keys:
    - Adzuna: https://developer.adzuna.com/ (instant)
    - USAJobs: https://developer.usajobs.gov/apirequest/ (key emailed within minutes)
+   - Jooble: https://jooble.org/api/about (key emailed within minutes)
+   - Remotive: no key needed
 2. Copy `.env.example` to `.env` and fill in the keys.
 3. Run a search:
 
@@ -42,7 +46,7 @@ Edit `config.json`:
 - `candidate.location.metroTerms` / `stateTerms` / `remoteTerms` / `remoteOk` — place names for scoring location fit; `onsiteRadiusMiles` / `onsiteRadiusCenter` define the hard cutoff for non-remote postings
 - `candidate.maxYearsExperienceComfortable` — flags postings whose stated experience requirement is a stretch
 - `candidate.excludeIfTitleContains` — titles to hard-exclude regardless of everything else
-- `search.queries` / `search.queryLocations` — the actual search terms and locations sent to Adzuna/USAJobs
+- `search.queries` / `search.queryLocations` — the actual search terms and locations sent to Adzuna/USAJobs/Jooble (Remotive uses `search.queries` only, since it's remote-only)
 
 ## Next step after a search
 

@@ -68,6 +68,12 @@
     "usajobs": {
       "resultsPerQuery": 30
     },
+    "jooble": {
+      "resultsPerQuery": 30
+    },
+    "remotive": {
+      "resultsPerQuery": 30
+    },
     "greenhouseBoards": [],
     "leverBoards": []
   }
