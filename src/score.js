@@ -129,6 +129,46 @@ export function detectClearanceRequirement(title, description) {
   };
 }
 
+const STATE_ABBR_SET = new Set([
+  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID",
+  "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS",
+  "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
+  "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+  "WI", "WY", "DC", "PR",
+]);
+
+// Some remote postings (common with federal-contractor staffing agencies)
+// exclude candidates in specific states for tax/employment-law reasons —
+// a hard, binary disqualifier regardless of skill fit, distinct from a
+// generic location mismatch. Best-effort: catches the common phrasing
+// Adzuna postings use, not guaranteed to catch every wording.
+// Captures a run of 2-letter tokens (state codes) rather than relying on
+// punctuation to mark the end of the list — real postings often run
+// straight into the next sentence with no period ("...WY Future Need -
+// Actively Interviewing...").  Bogus trailing tokens (e.g. "Fu" from
+// "Future") get filtered out downstream by the STATE_ABBR_SET check.
+const STATE_LIST = "(?:[A-Za-z]{2}[,\\s]+)+[A-Za-z]{2}";
+const STATE_EXCLUSION_PATTERNS = [
+  new RegExp(`excluded (?:from this job ad|states?/districts?|states?)[:\\s]*(${STATE_LIST})`, "i"),
+  new RegExp(`not eligible (?:to work |to apply )?in (?:the following states?|these states?)[:\\s]*(${STATE_LIST})`, "i"),
+];
+
+export function detectStateExclusion(description, candidateStateAbbr) {
+  const text = description ?? "";
+  for (const re of STATE_EXCLUSION_PATTERNS) {
+    const m = re.exec(text);
+    if (m) {
+      const codes = m[1]
+        .split(/[,\s]+/)
+        .map((s) => s.trim().toUpperCase())
+        .filter((s) => STATE_ABBR_SET.has(s));
+      if (codes.length === 0) continue; // regex matched but nothing parseable — skip
+      return { excluded: codes.includes(candidateStateAbbr.toUpperCase()), excludedStates: codes };
+    }
+  }
+  return { excluded: false, excludedStates: [] };
+}
+
 export function scorePosting(posting, profile) {
   const title = norm(posting.title);
   const desc = norm(posting.description);
@@ -143,6 +183,18 @@ export function scorePosting(posting, profile) {
   );
   if (excluded) {
     return { score: -1, matchedSkills: [], flags: ["Excluded: senior/lead/management title"] };
+  }
+
+  // Hard exclude: posting explicitly bars candidates from the candidate's state
+  if (profile.stateAbbreviation) {
+    const stateExclusion = detectStateExclusion(posting.description, profile.stateAbbreviation);
+    if (stateExclusion.excluded) {
+      return {
+        score: -1,
+        matchedSkills: [],
+        flags: [`Excluded: posting bars candidates in ${profile.stateAbbreviation} (excluded states: ${stateExclusion.excludedStates.join(", ")})`],
+      };
+    }
   }
 
   // Title match
