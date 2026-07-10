@@ -10,18 +10,18 @@ Auto-submitting applications is high-risk and hard to reverse: a bad match or a 
 
 - **Adzuna** — broad job aggregator, free API tier.
 - **USAJobs** — federal government postings, free API.
-- **Jooble** — broad job aggregator, free API tier.
 - **Remotive** — remote-only listings, free, no API key required. Queried once per search term (not per location) since every listing is already remote.
 - **Greenhouse / Lever** — no API key needed, but only searches specific companies' boards you add to `config.json` (`search.greenhouseBoards`, `search.leverBoards`). Find a company's board token/site from their careers page URL, e.g. `boards.greenhouse.io/<token>` or `jobs.lever.co/<site>`.
 
 LinkedIn and Indeed are deliberately excluded — both prohibit automated scraping in their terms of service and can flag or suspend accounts for bot-like activity.
+
+**Jooble was tried and removed.** It was added as a source, then dropped after a single shortlist run: 4 of 4 Jooble-sourced postings that scored well and read clean turned out unusable once actually clicked through — two redirected to a jobleads.com paywall, one was mislabeled as remote when the real posting was onsite, and one was a dead/expired listing. The aggregator's own data quality was the failure, not the scoring or matching logic. Re-adding it would need an apply-link liveness check first (Jooble's redirect pages sit behind a Cloudflare bot-challenge, so that check can't be automated reliably — see `src/sources/adzuna.js`-style WAF issues for the same category of problem).
 
 ## Setup
 
 1. Get free API keys:
    - Adzuna: https://developer.adzuna.com/ (instant)
    - USAJobs: https://developer.usajobs.gov/apirequest/ (key emailed within minutes)
-   - Jooble: https://jooble.org/api/about (key emailed within minutes)
    - Remotive: no key needed
 2. Copy `.env.example` to `.env` and fill in the keys.
 3. Run a search:
@@ -46,7 +46,7 @@ Edit `config.json`:
 - `candidate.location.metroTerms` / `stateTerms` / `remoteTerms` / `remoteOk` — place names for scoring location fit; `onsiteRadiusMiles` / `onsiteRadiusCenter` define the hard cutoff for non-remote postings
 - `candidate.maxYearsExperienceComfortable` — flags postings whose stated experience requirement is a stretch
 - `candidate.excludeIfTitleContains` — titles to hard-exclude regardless of everything else
-- `search.queries` / `search.queryLocations` — the actual search terms and locations sent to Adzuna/USAJobs/Jooble (Remotive uses `search.queries` only, since it's remote-only)
+- `search.queries` / `search.queryLocations` — the actual search terms and locations sent to Adzuna/USAJobs (Remotive uses `search.queries` only, since it's remote-only)
 
 ## Next step after a search
 
