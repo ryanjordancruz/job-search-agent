@@ -52,9 +52,11 @@
       "security analyst",
       "SOC analyst",
       "cybersecurity analyst",
-      "vulnerability analyst"
+      "vulnerability analyst",
+      "information security analyst",
+      "incident response analyst"
     ],
-    "queryLocations": ["Las Vegas, NV", "Nevada", "Remote"],
+    "queryLocations": ["Las Vegas, NV", "Nevada", "Remote", ""],
     "adzuna": {
       "country": "us",
       "resultsPerQuery": 30,
