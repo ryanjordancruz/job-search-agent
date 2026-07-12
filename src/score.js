@@ -75,6 +75,13 @@ const TITLE_RELEVANCE_TERMS = [
   "infosec", "information assurance", "incident response",
 ];
 
+// "Compliance"/"GRC" alone are ambiguous — banking (loan/mortgage quality
+// control), tax, HR, and environmental compliance analysts all use the exact
+// same title as security/IT compliance roles. Unlike TITLE_RELEVANCE_TERMS,
+// these words don't confirm the domain on their own, so a titleHit built
+// purely on one of these needs corroboration (see isAmbiguousTitleHit below).
+const AMBIGUOUS_COMPLIANCE_TERMS = ["compliance", "grc"];
+
 const CLEARANCE_TERMS = [
   "security clearance", "ts/sci", "top secret", "secret clearance",
   "public trust", "clearable", "dod clearance", "government clearance",
@@ -210,12 +217,26 @@ const STATE_NAMES = {
 // acceptable rather than a barred list.
 const RESIDENCY_PATTERN = /must be an? ([a-z .]+?) resident/i;
 
+// The captured token often carries filler words ahead of the actual state
+// ("must be a CURRENT Wisconsin resident") that don't match STATE_NAMES/
+// STATE_ABBR_SET verbatim. Rather than require the whole token to be a state,
+// check its trailing 1- or 2-word suffix (state names are at most two words)
+// so filler prefixes like "current"/"legal"/"permanent" don't break the match.
+function extractStateFromToken(token) {
+  const words = token.split(/\s+/).filter(Boolean);
+  for (let len = Math.min(2, words.length); len >= 1; len--) {
+    const candidate = words.slice(words.length - len).join(" ");
+    if (STATE_ABBR_SET.has(candidate.toUpperCase())) return candidate.toUpperCase();
+    if (STATE_NAMES[candidate]) return STATE_NAMES[candidate];
+  }
+  return null;
+}
+
 export function detectResidencyRequirement(description, candidateStateAbbr) {
   const text = norm(description);
   const m = RESIDENCY_PATTERN.exec(text);
   if (!m) return { required: false, requiredState: null, matchesCandidate: true };
-  const token = m[1].trim();
-  const state = STATE_ABBR_SET.has(token.toUpperCase()) ? token.toUpperCase() : STATE_NAMES[token] ?? null;
+  const state = extractStateFromToken(m[1].trim());
   if (!state) return { required: false, requiredState: null, matchesCandidate: true };
   return { required: true, requiredState: state, matchesCandidate: state === candidateStateAbbr.toUpperCase() };
 }
@@ -306,19 +327,33 @@ export function scorePosting(posting, profile) {
     flags.push("Also remote-eligible");
   }
 
+  // Skill keyword overlap (computed before the title match so the ambiguous-
+  // compliance-title corroboration check below can use it)
+  const matchedSkills = profile.skills.filter((skill) => containsTerm(combined, skill));
+  score += Math.min(matchedSkills.length * 3, 30);
+
   // Title match
-  const titleHit = profile.targetTitles.find((t) => title.includes(t.toLowerCase()));
-  const titleRelevant = Boolean(titleHit) || TITLE_RELEVANCE_TERMS.some((t) => containsTerm(title, t));
+  const rawTitleHit = profile.targetTitles.find((t) => title.includes(t.toLowerCase()));
+  const hasSecurityTitleTerm = TITLE_RELEVANCE_TERMS.some((t) => containsTerm(title, t));
+  // A titleHit built purely on an ambiguous compliance/GRC term (no other
+  // security-specific title language) needs at least one matched security
+  // skill/framework keyword in the body — otherwise it's treated the same as
+  // no title match at all. Caught Pyramid Inc's mortgage-loan "Compliance
+  // Analyst" and a "GRC Analyst" posting that never mentioned a single
+  // security framework or tool, both of which scored well on title alone.
+  const isAmbiguousTitleHit = Boolean(rawTitleHit) && !hasSecurityTitleTerm &&
+    AMBIGUOUS_COMPLIANCE_TERMS.some((t) => containsTerm(rawTitleHit, t)) &&
+    matchedSkills.length === 0;
+  const titleHit = isAmbiguousTitleHit ? null : rawTitleHit;
+  const titleRelevant = Boolean(titleHit) || hasSecurityTitleTerm;
   if (titleHit) {
     score += 30;
   } else if (titleRelevant) {
     // partial credit: title touches security, but isn't one of the exact target titles
     score += 15;
+  } else if (isAmbiguousTitleHit) {
+    flags.push("Title reads as compliance/GRC but no security skills/frameworks matched — likely a non-security compliance role (banking/tax/HR)");
   }
-
-  // Skill keyword overlap
-  const matchedSkills = profile.skills.filter((skill) => containsTerm(combined, skill));
-  score += Math.min(matchedSkills.length * 3, 30);
 
   // Certification match
   const certHit = profile.certifications.some((c) => containsTerm(combined, c));
