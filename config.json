@@ -11,7 +11,12 @@
       "Security Operations Analyst",
       "Junior Security Analyst",
       "Vulnerability Analyst",
-      "Incident Response Analyst"
+      "Incident Response Analyst",
+      "IT Security Specialist",
+      "Compliance Analyst",
+      "GRC Analyst",
+      "Junior Penetration Tester",
+      "IT Support Analyst"
     ],
     "location": {
       "onsiteRadiusMiles": 20,
@@ -57,7 +62,12 @@
       "cybersecurity analyst",
       "vulnerability analyst",
       "information security analyst",
-      "incident response analyst"
+      "incident response analyst",
+      "IT security specialist",
+      "compliance analyst",
+      "GRC analyst",
+      "junior penetration tester",
+      "IT support analyst"
     ],
     "queryLocations": ["Las Vegas, NV", "Nevada", "Remote", ""],
     "adzuna": {
