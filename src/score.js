@@ -100,6 +100,20 @@ const OBTAIN_CUES = [
   "ability to pass", "capable of obtaining",
 ];
 
+// Defense-contractor postings (SAIC/Leidos/GovCIO templates) often carry a
+// structured field: "Minimum Clearance Required: Top_Secret" alongside a
+// separate "Clearance Level Must Be Able to Obtain: TS/SCI" field for an
+// in-role upgrade path. That second field's "obtain" wording previously
+// tripped OBTAIN_CUES below and got misread as openness to candidates without
+// a clearance — but "Minimum Clearance Required" naming an actual level means
+// one is required in hand, full stop, regardless of the upgrade-path field
+// next to it. Caught in the wild on a SAIC "Cybersecurity Compliance Analyst"
+// posting (Minimum Clearance Required: Top_Secret) that scored as merely
+// "open to obtain." This structured field is authoritative and short-circuits
+// the generic cue-window heuristic when it names a real clearance level.
+const MIN_CLEARANCE_FIELD_PATTERN = /minimum clearance required:\s*([a-z0-9\/ ]+?)(?:[\n.]|clearance level|potential for remote|$)/i;
+const NO_CLEARANCE_VALUES = new Set(["none", "n/a", "na", "not required", "none required"]);
+
 // Looks for "clearance" mentions across the title AND description (Adzuna's
 // description field is often truncated and drops the clearance language even
 // when the title carries a "with Security Clearance" suffix — a standard
@@ -107,7 +121,16 @@ const OBTAIN_CUES = [
 // requiring one already active vs. being open to candidates willing/eligible
 // to obtain one. A posting can only be penalized for the former.
 export function detectClearanceRequirement(title, description) {
-  const text = `${norm(title)} ${norm(description)}`;
+  // Templates use underscore-joined enum values ("Top_Secret") instead of
+  // spaces — normalize so CLEARANCE_TERMS ("top secret") and the field
+  // pattern above still match.
+  const text = `${norm(title)} ${norm(description)}`.replace(/_/g, " ");
+
+  const fieldMatch = MIN_CLEARANCE_FIELD_PATTERN.exec(text);
+  if (fieldMatch && !NO_CLEARANCE_VALUES.has(fieldMatch[1].trim())) {
+    return { mentioned: true, requiresActive: true, opennessToObtain: false };
+  }
+
   const mentioned = CLEARANCE_TERMS.some((t) => containsTerm(text, t));
   if (!mentioned) {
     return { mentioned: false, requiresActive: false, opennessToObtain: false };
@@ -214,8 +237,14 @@ const STATE_NAMES = {
 // candidate to already live in a specific state (e.g. "Candidate MUST be a
 // SC resident. No relocation allowed.") — a hard disqualifier distinct from
 // the explicit excluded-states list above, since here only ONE state is
-// acceptable rather than a barred list.
-const RESIDENCY_PATTERN = /must be an? ([a-z .]+?) resident/i;
+// acceptable rather than a barred list. Also catches the "Remote (Local to
+// WI)" phrasing staffing agencies use as a location-suffix shorthand for the
+// same requirement — caught in the wild on a Visionary Innovative Technology
+// Solutions posting that read as clean nationwide-remote otherwise.
+const RESIDENCY_PATTERNS = [
+  /must be an? ([a-z .]+?) resident/i,
+  /local to\s+([a-z][a-z .]*?)(?=[)\.,;]|\s+area\b|$)/i,
+];
 
 // The captured token often carries filler words ahead of the actual state
 // ("must be a CURRENT Wisconsin resident") that don't match STATE_NAMES/
@@ -234,11 +263,14 @@ function extractStateFromToken(token) {
 
 export function detectResidencyRequirement(description, candidateStateAbbr) {
   const text = norm(description);
-  const m = RESIDENCY_PATTERN.exec(text);
-  if (!m) return { required: false, requiredState: null, matchesCandidate: true };
-  const state = extractStateFromToken(m[1].trim());
-  if (!state) return { required: false, requiredState: null, matchesCandidate: true };
-  return { required: true, requiredState: state, matchesCandidate: state === candidateStateAbbr.toUpperCase() };
+  for (const pattern of RESIDENCY_PATTERNS) {
+    const m = pattern.exec(text);
+    if (!m) continue;
+    const state = extractStateFromToken(m[1].trim());
+    if (!state) continue;
+    return { required: true, requiredState: state, matchesCandidate: state === candidateStateAbbr.toUpperCase() };
+  }
+  return { required: false, requiredState: null, matchesCandidate: true };
 }
 
 export function scorePosting(posting, profile) {
