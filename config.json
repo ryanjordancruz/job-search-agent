@@ -81,7 +81,7 @@
     "remotive": {
       "resultsPerQuery": 30
     },
-    "greenhouseBoards": [],
-    "leverBoards": []
+    "greenhouseBoards": ["versprite", "cybersheath", "smartsheet", "onepath", "tactacam"],
+    "leverBoards": ["uvcyber", "contentsquare"]
   }
 }
