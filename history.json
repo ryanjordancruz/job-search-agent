@@ -1,0 +1,170 @@
+[
+  {
+    "company": "EMCOR Group",
+    "titleContains": ["identity and access management", "iam"],
+    "status": "disqualified",
+    "reason": "Real req needs 5yr Active Directory, 3yr Entra ID, 2yr Sentinel/Defender, 1yr PAM — none of which the candidate has. Keeps resurfacing under different titles/sources with the same disqualifying requirements.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "GAMA-1 Technologies",
+    "titleContains": ["security specialist"],
+    "status": "disqualified",
+    "reason": "Posts a full I/II/III/V ladder for the same IT Security Specialist – Compliance and Governance role family; the tier number doesn't reflect actual seniority. The \"I\" tier req itself requires 8+ years in cybersecurity governance/compliance and 5+ years in a senior IA/GRC/cybersecurity management role.",
+    "dateAdded": "2026-07-12"
+  },
+  {
+    "company": "Complete Network Services",
+    "titleContains": [],
+    "status": "disqualified",
+    "reason": "Soft Chicago-residency preference stated in the posting.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "Summit 7 Systems",
+    "titleContains": ["vulnerability"],
+    "status": "expired",
+    "reason": "Stale/closed listing Adzuna keeps re-syndicating with a fresh posted-date. Summit 7's own ATS (isolvedhire.com) shows the matching req (\"Red Team Vulnerability Analyst — Remote, AL\", same $55k-75k band) as CLOSED.",
+    "dateAdded": "2026-07-11"
+  },
+  {
+    "company": "SAIC",
+    "titleContains": ["cybersecurity analyst"],
+    "status": "disqualified",
+    "reason": "Adzuna's own structured field says \"Potential for Remote Work: ORA_ON_SITE\" (onsite, not remote) and the description text says \"seeking a senior network security analyst\" despite a clean-looking title. Confirmed on this exact title 2x (San Antonio, Fort Sam Houston).",
+    "dateAdded": "2026-07-11"
+  },
+  {
+    "company": "SAIC",
+    "titleContains": ["compliance analyst"],
+    "status": "disqualified",
+    "reason": "Adzuna's raw description field says \"Minimum Clearance Required: Top_Secret\" and \"Clearance Level Must Be Able to Obtain: TS/SCI\", plus \"Potential for Remote Work: ORA_ON_SITE\" — an active-clearance, onsite-only role, not the soft/open-to-obtain read the scorer originally gave it.",
+    "dateAdded": "2026-07-13"
+  },
+  {
+    "company": "North Texas Contracting",
+    "titleContains": [],
+    "status": "unverifiable",
+    "reason": "Likely fake/mismatched listing. NTC is a real DFW underground-utilities/civil-contracting firm whose own careers page lists zero IT openings; the posting's self-description (\"fast-scaling construction technology firm\", \"remote-first workforce\") doesn't match the real company's business at all.",
+    "dateAdded": "2026-07-13"
+  },
+  {
+    "company": "Electric Machinery Company",
+    "titleContains": [],
+    "status": "disqualified",
+    "reason": "Real posting (Indeed/Paylocity) is onsite deskside hardware support (desktops, printers, conference-room gear) at their Minneapolis manufacturing facility. Adzuna tagged it remote-eligible; it isn't.",
+    "dateAdded": "2026-07-13"
+  },
+  {
+    "company": "Sunrise Systems",
+    "titleContains": ["vulnerability"],
+    "status": "disqualified",
+    "reason": "Requires 3+ years plus named tools the candidate doesn't have (Qualys/Tenable/Nessus vs. candidate's Nmap/OpenVAS) — a real tool-depth gap, not just a stretch.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "cFocus Software",
+    "titleContains": ["vulnerability"],
+    "status": "disqualified",
+    "reason": "NIH-contract vulnerability analyst postings require 5-7 years of experience.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "M9 Solutions",
+    "titleContains": [],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "Leidos",
+    "titleContains": [],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "Yakshna",
+    "titleContains": [],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "ReliaQuest",
+    "titleContains": ["greymatter", "grey matter"],
+    "status": "resubmission-blocked",
+    "reason": "Candidate applied to this exact role (GreyMatter Specialist) in March 2026 and was rejected. Tried again ~4 months later under a different req number, but ReliaQuest's Workday ATS wouldn't allow a new submission at all — time elapsed and a different req number don't matter, Workday can block resubmission outright.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "TalentFish",
+    "titleContains": [],
+    "status": "expired",
+    "reason": "Confirmed expired — no open jobs at TalentFish LLC per Indeed, role no longer listed on their LinkedIn.",
+    "dateAdded": "2026-07-10"
+  },
+  {
+    "company": "TRIGYN Technologies",
+    "titleContains": ["splunk"],
+    "status": "disqualified",
+    "reason": "Requires expert-level Splunk architecture/administration/clustering/index-management (beyond candidate's homelab-level exposure), and it's part-time (max 10 hrs/week), not full-time.",
+    "dateAdded": "2026-07-12"
+  },
+  {
+    "company": "Miracle Software Systems",
+    "titleContains": ["oracle"],
+    "status": "disqualified",
+    "reason": "Requires 6+ years IT security/audit/controls plus 3+ years hands-on Oracle Fusion Cloud application security (Security Console, role-to-privilege mapping) — a different domain entirely, not a stretch.",
+    "dateAdded": "2026-07-13"
+  },
+  {
+    "company": "4 Consulting Inc",
+    "titleContains": ["information security analyst"],
+    "status": "disqualified",
+    "reason": "Every live \"Information Security Analysts\" posting on 4Ci's own job portal shares identical generic boilerplate opening text but requires 5+ years of specialized enterprise experience (WAF admin, cloud security ops, or GCP IAM/Terraform/OAuth) once read in full.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "company": "ManpowerGroup",
+    "titleContains": ["vulnerability management"],
+    "status": "disqualified",
+    "reason": "Real role (confirmed via Experis's own posting) requires the Brinqa vulnerability tool as a MUST HAVE (candidate has Nmap/OpenVAS/Wazuh, not Brinqa) plus financial-services/Enterprise Payments domain experience.",
+    "dateAdded": "2026-07-14"
+  },
+  {
+    "company": "Digital Minds Global",
+    "titleContains": [],
+    "status": "unverifiable",
+    "reason": "Several unrelated companies share near-identical names; the one whose careers page could be found has no matching GRC listing, just senior dev/QA/ETL roles. Not chased further.",
+    "dateAdded": "2026-07-12"
+  },
+  {
+    "company": "Lumen",
+    "titleContains": ["assurance analyst", "audit"],
+    "status": "disqualified",
+    "reason": "\"Cybersecurity Assurance Analyst (Audit)\" requires a Bachelor's + 6 years experience (or Master's + 4 years), plus 2-3 years of audit-framework experience (CMMC, SSAE 16, SOC 1/2, PCI, ISO, HIPAA, NACHA, SOX) and CISA/CISSP/GSEC/CISM certs — a senior compliance-auditor role, not an entry-level fit.",
+    "dateAdded": "2026-07-15"
+  },
+  {
+    "company": "Wynn",
+    "titleContains": ["infosec grc", "grc"],
+    "status": "unverifiable",
+    "reason": "Wynn's own SmartRecruiters ATS only has one InfoSec GRC req (\"Analyst - InfoSec GRC\", #744000114752877) and it's marked \"This job ad has expired\" directly on Wynn's site. No \"Engineer\" tier of the role appears anywhere on Wynn's live careers board — same stale-listing-with-fresh-date pattern as Summit 7. Even the Analyst tier needed 2 years hands-on audit/compliance plus GRC tooling (Archer/ServiceNow GRC/AuditBoard) the candidate hasn't used.",
+    "dateAdded": "2026-07-15"
+  },
+  {
+    "company": "ShorePoint",
+    "titleContains": ["clearance"],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance (Q Clearance).",
+    "dateAdded": "2026-07-15"
+  },
+  {
+    "company": "uvcyber",
+    "titleContains": ["sales"],
+    "status": "disqualified",
+    "reason": "Wrong domain — a sales/business-development role, not an analyst/technical one, despite matching the \"penetration testing\" skill keyword.",
+    "dateAdded": "2026-07-15"
+  }
+]

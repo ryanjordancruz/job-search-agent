@@ -36,6 +36,10 @@ LinkedIn and Indeed are deliberately excluded — both prohibit automated scrapi
 
 Each run prints a ranked list to the console and writes the same data to `data/shortlist-<date>.json`. Scoring rewards title relevance, matched skills/certifications, and entry-level language; it hard-excludes senior/lead/manager titles, postings that bar the candidate's state, and non-remote postings outside a configurable commute radius, and it penalizes postings requiring more experience or an active security clearance than the candidate has.
 
+## Dedupe against past research
+
+Postings that scored well but turned out to be dead ends after a manual careers-page/ATS check (expired, wrong seniority, wrong domain, resubmission-blocked, etc.) are recorded in `history.json` and automatically dropped from future runs — they'd otherwise resurface every time the source re-syndicates them with a fresh posted-date. Each entry matches on company name (fuzzy substring) plus optional `titleContains` keywords to scope it to the specific role rather than the whole company. Add an entry any time a promising-looking posting turns out to be a confirmed dead end.
+
 ## Tuning your profile
 
 Edit `config.json`:

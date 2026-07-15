@@ -8,6 +8,7 @@ import { searchRemotive } from "./sources/remotive.js";
 import { searchGreenhouse } from "./sources/greenhouse.js";
 import { searchLever } from "./sources/lever.js";
 import { scorePosting } from "./score.js";
+import { loadHistory, findHistoryMatch } from "./history.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
@@ -102,10 +103,24 @@ async function main() {
     .filter((r) => r.score >= 0)
     .sort((a, b) => b.score - a.score);
 
-  const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.split("=")[1]) || 20;
-  const top = scored.slice(0, limit);
+  // Drop postings already confirmed as dead ends in a prior review (expired,
+  // clearance-blocked, wrong seniority, wrong domain, resubmission-blocked,
+  // etc.) — see history.json. The scorer's filters catch systematic textual
+  // patterns; this catches specific reqs/companies that needed a manual
+  // careers-page/ATS check to rule out and would otherwise resurface under a
+  // fresh posted-date every run.
+  const history = loadHistory();
+  const known = scored.filter((r) => findHistoryMatch(r.posting, history));
+  const fresh = scored.filter((r) => !findHistoryMatch(r.posting, history));
 
-  console.log(`Found ${postings.length} postings, ${scored.length} passed filters. Top ${top.length}:\n`);
+  const limit = Number(process.argv.find((a) => a.startsWith("--limit="))?.split("=")[1]) || 20;
+  const top = fresh.slice(0, limit);
+
+  const repeatNote = known.length ? `, ${known.length} already ruled out (skipped)` : "";
+  console.log(`Found ${postings.length} postings, ${scored.length} passed filters${repeatNote}. Top ${top.length} new:\n`);
+  if (scored.length > 0 && fresh.length === 0) {
+    console.log("Every passed-filter posting today is a previously-confirmed dead end — no new candidates.\n");
+  }
 
   top.forEach((r, i) => {
     const p = r.posting;
