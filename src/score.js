@@ -73,6 +73,7 @@ export function extractExperienceRequirements(description) {
 const TITLE_RELEVANCE_TERMS = [
   "security", "cyber", "cybersecurity", "soc", "vulnerability",
   "infosec", "information assurance", "incident response",
+  "penetration", "red team", "red cell", "offensive security",
 ];
 
 // "Compliance"/"GRC" alone are ambiguous — banking (loan/mortgage quality
@@ -438,7 +439,27 @@ export function scorePosting(posting, profile) {
 
   // Title relevance gate: don't let skill/cert keyword noise in the
   // description carry a posting whose title has nothing to do with security.
+  // A title with zero security signal AND zero matched skill keywords has no
+  // real signal at all (sales/customer-service/unrelated-analyst postings
+  // that only entered the pool via a loose query-term match) — exclude it
+  // outright rather than let it clutter results at a token low score. Caught
+  // in the wild 2026-07-15: once known-repeat postings were filtered out by
+  // history.json, a run's "new" results backfilled entirely with these
+  // (Remote Office Assistant, Sales Assistant, Account Executive, etc.), all
+  // scoring the same flat 8 with matchedSkills: []. If at least one skill
+  // keyword did match, keep it visible-but-capped instead of excluding: a
+  // company-branded title (e.g. a platform name standing in for "analyst")
+  // can still hide a genuinely strong match — see the known ReliaQuest
+  // GreyMatter gap in job_search_agent_project memory — so that case is
+  // worth a manual look rather than disappearing entirely.
   if (!titleRelevant) {
+    if (matchedSkills.length === 0) {
+      return {
+        score: -1,
+        matchedSkills,
+        flags: ["Excluded: title isn't security-related and no skill keywords matched in the description"],
+      };
+    }
     score = Math.min(score, 8);
     flags.push("Title doesn't read as a security role — kept low despite keyword matches in the description");
   }
