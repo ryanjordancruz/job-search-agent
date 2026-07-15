@@ -166,5 +166,19 @@
     "status": "disqualified",
     "reason": "Wrong domain — a sales/business-development role, not an analyst/technical one, despite matching the \"penetration testing\" skill keyword.",
     "dateAdded": "2026-07-15"
+  },
+  {
+    "company": "AGR",
+    "titleContains": ["penetration", "red cell"],
+    "status": "disqualified",
+    "reason": "Adzuna's company/location fields are wrong for this req — AGR is a staffing agency re-posting a role for the real employer, Internetwork Consulting Services (ICS). Real posting is onsite/situational-telework in Rosslyn, VA (must be local to the job site, despite Adzuna's \"Remote-eligible\" tag), requires an active Secret clearance, and requires one of CCNA Cyber Ops/CCNA-Security/CEH/CFR/Cloud+/CySA+/GCIA/GCIH/GICSP/SCYBER — not Security+.",
+    "dateAdded": "2026-07-15"
+  },
+  {
+    "company": "Internetwork Consulting Services",
+    "titleContains": ["penetration", "red cell"],
+    "status": "disqualified",
+    "reason": "Same req as the AGR entry above (AGR appears to be a staffing agency re-posting for this employer) — active Secret clearance required, onsite/situational-telework in Rosslyn VA, and required certs (CCNA Cyber Ops/CCNA-Security/CEH/CFR/Cloud+/CySA+/GCIA/GCIH/GICSP/SCYBER) don't include Security+.",
+    "dateAdded": "2026-07-15"
   }
 ]
