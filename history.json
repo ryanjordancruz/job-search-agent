@@ -173,5 +173,12 @@
     "status": "disqualified",
     "reason": "Same req as the AGR entry above (AGR appears to be a staffing agency re-posting for this employer) — active Secret clearance required, onsite/situational-telework in Rosslyn VA, and required certs (CCNA Cyber Ops/CCNA-Security/CEH/CFR/Cloud+/CySA+/GCIA/GCIH/GICSP/SCYBER) don't include Security+.",
     "dateAdded": "2026-07-15"
+  },
+  {
+    "company": "Kastech",
+    "titleContains": ["it audit", "compliance analyst"],
+    "status": "unverifiable",
+    "reason": "\"IT Audit & Compliance Analyst - IRS 1075 / NIST\" posted identically across 5 unrelated small towns (Meridian AR, Tupelo MS, Jackson MS, Olive Branch MS, Hattiesburg MS). Kastech's own careers page (kastechssg.com) lists 7 real open roles (Programmer Analyst, PM I/II, Sr. App Developer I/II, Sr. Business/Functional Analyst I/II, all Richmond TX) — zero IT Audit/Compliance/NIST/IRS 1075 roles among them. Same fake/mismatched-listing pattern as North Texas Contracting.",
+    "dateAdded": "2026-07-16"
   }
 ]
