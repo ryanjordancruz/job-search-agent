@@ -98,13 +98,6 @@
     "dateAdded": "2026-07-10"
   },
   {
-    "company": "TalentFish",
-    "titleContains": [],
-    "status": "expired",
-    "reason": "Confirmed expired — no open jobs at TalentFish LLC per Indeed, role no longer listed on their LinkedIn.",
-    "dateAdded": "2026-07-10"
-  },
-  {
     "company": "TRIGYN Technologies",
     "titleContains": ["splunk"],
     "status": "disqualified",
