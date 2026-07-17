@@ -180,5 +180,40 @@
     "status": "unverifiable",
     "reason": "\"IT Audit & Compliance Analyst - IRS 1075 / NIST\" posted identically across 5 unrelated small towns (Meridian AR, Tupelo MS, Jackson MS, Olive Branch MS, Hattiesburg MS). Kastech's own careers page (kastechssg.com) lists 7 real open roles (Programmer Analyst, PM I/II, Sr. App Developer I/II, Sr. Business/Functional Analyst I/II, all Richmond TX) — zero IT Audit/Compliance/NIST/IRS 1075 roles among them. Same fake/mismatched-listing pattern as North Texas Contracting.",
     "dateAdded": "2026-07-16"
+  },
+  {
+    "company": "Career Soft Solutions",
+    "titleContains": ["epic security"],
+    "status": "disqualified",
+    "reason": "\"Epic Security Analyst\" is Epic Systems EHR software access/build/provisioning work (Epic User Security/Data Courier certification), a healthcare-IT domain unrelated to information security despite the \"security\" keyword — not the candidate's field.",
+    "dateAdded": "2026-07-17"
+  },
+  {
+    "company": "SAIC",
+    "titleContains": ["sap security"],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance, per the scorer's clearance flag on this posting.",
+    "dateAdded": "2026-07-17"
+  },
+  {
+    "company": "GovCIO",
+    "titleContains": ["cyber threat analyst"],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-07-17"
+  },
+  {
+    "company": "Gridiron IT Solutions",
+    "titleContains": ["compliance analyst"],
+    "status": "disqualified",
+    "reason": "Requires 10+ years of experience plus an active security clearance.",
+    "dateAdded": "2026-07-17"
+  },
+  {
+    "company": "Gulf Coast Automation Group",
+    "titleContains": ["information security analyst"],
+    "status": "applied",
+    "reason": "This is TalentFish LLC's \"Information Security Analyst – SOC\" role (Adzuna details ID 5799558049, $100k-105k) listed under a client-facing company label instead of TalentFish's own name — same posting resurfaced under this exact label on both 2026-07-16 and 2026-07-17. Candidate already applied via Adzuna's apply flow on 2026-07-16. See job_talentfish_soc_analyst memory.",
+    "dateAdded": "2026-07-17"
   }
 ]
