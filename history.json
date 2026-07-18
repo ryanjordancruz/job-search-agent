@@ -215,5 +215,19 @@
     "status": "applied",
     "reason": "This is TalentFish LLC's \"Information Security Analyst – SOC\" role (Adzuna details ID 5799558049, $100k-105k) listed under a client-facing company label instead of TalentFish's own name — same posting resurfaced under this exact label on both 2026-07-16 and 2026-07-17. Candidate already applied via Adzuna's apply flow on 2026-07-16. See job_talentfish_soc_analyst memory.",
     "dateAdded": "2026-07-17"
+  },
+  {
+    "company": "Collabera",
+    "titleContains": ["cyber security engineer"],
+    "status": "disqualified",
+    "reason": "Requires 5+ years of experience (confirmed by candidate reading the live posting) despite scoring well and reading clean in the aggregator listing.",
+    "dateAdded": "2026-07-18"
+  },
+  {
+    "company": "UnivEdge Consulting LLC",
+    "titleContains": ["soc analyst"],
+    "status": "disqualified",
+    "reason": "Adzuna posting itself states 5+ years required (scorer already flagged this) — candidate's 2yr comfortable bar makes this too senior.",
+    "dateAdded": "2026-07-18"
   }
 ]
