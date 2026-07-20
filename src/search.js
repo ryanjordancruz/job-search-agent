@@ -5,6 +5,7 @@ import { dirname, join } from "node:path";
 import { searchAdzuna } from "./sources/adzuna.js";
 import { searchUsajobs } from "./sources/usajobs.js";
 import { searchRemotive } from "./sources/remotive.js";
+import { searchJobicy } from "./sources/jobicy.js";
 import { searchGreenhouse } from "./sources/greenhouse.js";
 import { searchLever } from "./sources/lever.js";
 import { scorePosting } from "./score.js";
@@ -62,6 +63,13 @@ async function collectAll() {
     });
     if (remotive.skipped) notes.push(`[Remotive] ${remotive.reason}`);
     all.push(...remotive.results);
+
+    const jobicy = await searchJobicy({
+      query,
+      resultsPerQuery: search.jobicy.resultsPerQuery,
+    });
+    if (jobicy.skipped) notes.push(`[Jobicy] ${jobicy.reason}`);
+    all.push(...jobicy.results);
   }
 
   for (const board of search.greenhouseBoards ?? []) {

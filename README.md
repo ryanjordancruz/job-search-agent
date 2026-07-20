@@ -11,6 +11,7 @@ Auto-submitting applications is high-risk and hard to reverse: a bad match or a 
 - **Adzuna** — broad job aggregator, free API tier.
 - **USAJobs** — federal government postings, free API.
 - **Remotive** — remote-only listings, free, no API key required. Queried once per search term (not per location) since every listing is already remote.
+- **Jobicy** — remote-only listings, free, no API key required. Queried once per search term the same way as Remotive, scoped to `geo=usa`.
 - **Greenhouse / Lever** — no API key needed, but only searches specific companies' boards you add to `config.json` (`search.greenhouseBoards`, `search.leverBoards`). Find a company's board token/site from their careers page URL, e.g. `boards.greenhouse.io/<token>` or `jobs.lever.co/<site>`.
 
 LinkedIn and Indeed are deliberately excluded — both prohibit automated scraping in their terms of service and can flag or suspend accounts for bot-like activity.
