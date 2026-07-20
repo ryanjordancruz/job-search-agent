@@ -236,5 +236,12 @@
     "status": "disqualified",
     "reason": "Despite the \"Analyst\" title, this is a senior GRC/security-compliance program lead: 4+ years security governance/IT audit/compliance management required, stacked with 3+ years program management; end-to-end SOC 2 Type II/HITRUST/HIPAA/TISAX/ISO 27001/27701/42001/FedRAMP/PCI-DSS audit experience required; hands-on AWS/GCP/Azure cloud experience required. Confirmed live on Cresta's own Greenhouse board (job-boards.greenhouse.io/cresta/jobs/5013693008), not a mistag — the role itself is just too senior.",
     "dateAdded": "2026-07-20"
+  },
+  {
+    "company": "V-Soft Consulting Group",
+    "titleContains": ["security analyst"],
+    "status": "disqualified",
+    "reason": "Staffing-agency listing (via Dice) for an unnamed 'premier client', 48-week W2 contract. Real requirement is 4-7 years of IAM/account-provisioning experience (grant/revoke access, account de-provisioning, security-rule maintenance) — an IAM operations role, not SOC/detection work, and well above candidate's comfortable experience bar.",
+    "dateAdded": "2026-07-20"
   }
 ]
