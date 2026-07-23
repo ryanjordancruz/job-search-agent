@@ -1,5 +1,19 @@
 [
   {
+    "company": "Insight Global",
+    "titleContains": ["soc analyst"],
+    "status": "disqualified",
+    "reason": "Real posting (Remote SOC Analyst, Brunswick/Altama GA) requires 3-5 years Info Security/SOC experience, healthcare industry experience preferred, and certs like SSCP/GSEC/CISSP — well past candidate's 2yr comfortable bar.",
+    "dateAdded": "2026-07-23"
+  },
+  {
+    "company": "Naval Air Systems Command",
+    "titleContains": ["it specialist", "infosec"],
+    "status": "disqualified",
+    "reason": "USAJobs posting (Patuxent River, MD) 'This job is open to' section lists only internal federal employees, CTAP/ICTAP/RPL, land/base management, veterans, military spouses, and Schedule A disability hires — no general-public path, so candidate isn't eligible to apply at all. Also not actually remote (ad-hoc telework only) and requires GS-11-equivalent specialized experience plus security clearance.",
+    "dateAdded": "2026-07-23"
+  },
+  {
     "company": "EMCOR Group",
     "titleContains": ["identity and access management", "iam"],
     "status": "disqualified",
@@ -243,5 +257,40 @@
     "status": "disqualified",
     "reason": "Staffing-agency listing (via Dice) for an unnamed 'premier client', 48-week W2 contract. Real requirement is 4-7 years of IAM/account-provisioning experience (grant/revoke access, account de-provisioning, security-rule maintenance) — an IAM operations role, not SOC/detection work, and well above candidate's comfortable experience bar.",
     "dateAdded": "2026-07-20"
+  },
+  {
+    "company": "World Wide Technology",
+    "titleContains": ["infosec grc", "contract compliance"],
+    "status": "expired",
+    "reason": "Real posting (via WayUp redirect from Adzuna) says \"Sorry, this listing is no longer accepting applications.\" Also preferred location is MO, not the Las Vegas/Henderson NV listed by Adzuna.",
+    "dateAdded": "2026-07-21"
+  },
+  {
+    "company": "Defense Health Agency",
+    "titleContains": ["security specialist", "insider threat"],
+    "status": "disqualified",
+    "reason": "Requires ability to obtain/maintain Top Secret/SCI clearance, and the \"Who May Apply\" section restricts eligibility to specific federal employment-authority categories (current DoD/DHA civilian employees, military spouses, Schedule A, ICTAP, etc.) — not open to general public applicants.",
+    "dateAdded": "2026-07-21"
+  },
+  {
+    "company": "Apetan Consulting",
+    "titleContains": ["vulnerability management"],
+    "status": "disqualified",
+    "reason": "Real posting (via Dice) lists \"Experience Level: Intermediate (7-10)\" years and is explicitly \"On-site\", not remote — Adzuna's feed mistagged it remote-eligible.",
+    "dateAdded": "2026-07-21"
+  },
+  {
+    "company": "Radiology Partners",
+    "titleContains": ["it support analyst"],
+    "status": "applied",
+    "reason": "Applied 2026-07-21 to \"IT Support Analyst II\" (req #20238) via the employer's own Avature ATS. Confirmed only that req is live on radpartners.avature.net — the plain \"IT Support Analyst\" (non-II) tier Adzuna keeps syndicating is stale/not a real req. Adzuna resurfaces both titles as multiple duplicate listing IDs.",
+    "dateAdded": "2026-07-22"
+  },
+  {
+    "company": "Canonical",
+    "titleContains": ["security risk management"],
+    "status": "disqualified",
+    "reason": "Read the real posting on Jobicy (jobs/149564) in full. Despite the \"Specialist\" title and no explicit years-of-experience number (so it slipped past the numeric filter), the actual duties are senior/strategic: define company-wide security risk standards, lead quantitative risk modeling (FAIR methodology), drive external thought leadership, leadership/management ability expected. Not an entry-level fit.",
+    "dateAdded": "2026-07-22"
   }
 ]
