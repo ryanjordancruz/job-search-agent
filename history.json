@@ -1,5 +1,47 @@
 [
   {
+    "company": "Prudent Technologies and Consulting",
+    "titleContains": ["soc analyst"],
+    "status": "disqualified",
+    "reason": "Title says \"L2& L3\" and scored well, but the real Dice posting is explicitly an L3 SOC Lead/Senior Analyst role requiring 6-10+ years of experience plus mentoring/escalation-management expertise. Contract, night shift (1-10am ET).",
+    "dateAdded": "2026-07-27"
+  },
+  {
+    "company": "TEKsystems",
+    "titleContains": ["it support analyst"],
+    "status": "disqualified",
+    "reason": "Adzuna/scorer tags this \"Remote-eligible\" but the real Dice posting is fully onsite in Chicago, IL ($20-30/hr contract) — the description's \"Remote support\" bullet refers to supporting remote end-users, not a remote position. Also not local to Las Vegas. Resurfaces repeatedly under TEKsystems and \"TEKsystems c/o Allegis Group\" at different pay rates/req IDs for the same underlying onsite role.",
+    "dateAdded": "2026-07-27"
+  },
+  {
+    "company": "Kforce Technology Staffing",
+    "titleContains": ["it security analyst"],
+    "status": "disqualified",
+    "reason": "Real Dice posting requires 3-5 years of cybersecurity experience plus healthcare/HIPAA-regulated-environment experience — a stretch past candidate's 2yr comfortable bar. Listed as \"Remote in Charlestown, MA\" but Dice's own workplace-type badge says \"On-site\".",
+    "dateAdded": "2026-07-27"
+  },
+  {
+    "company": "Kutir Inc",
+    "titleContains": ["fedramp"],
+    "status": "disqualified",
+    "reason": "Real Dice posting requires FedRAMP Certification plus hands-on Delinea/Thycotic Secret Server and PAM experience, Tenable/Wiz exposure management — a genuine named-tool gap, not a stretch.",
+    "dateAdded": "2026-07-27"
+  },
+  {
+    "company": "Insight Global",
+    "titleContains": ["it support analyst"],
+    "status": "disqualified",
+    "reason": "Adzuna tags \"Remote-eligible\" but the real posting requires physical presence in the Houston office most days (L2 site support, executive white-glove support, MDF/IDF room work) — onsite, not remote.",
+    "dateAdded": "2026-07-27"
+  },
+  {
+    "company": "PSI Services",
+    "titleContains": ["federal", "soc engineer", "vulnerability"],
+    "status": "disqualified",
+    "reason": "\"Federal SOC Engineer Detect and Respond Analyst\" posting requires 7+ years as a Security/Systems Engineer, 3+ years with Proofpoint and 3+ years with CrowdStrike specifically, US citizenship, and ability to obtain federal security clearance. Same company's \"Federal Vulnerability Mgmt & App Security Engineer\" posting likely shares the same seniority/clearance bar.",
+    "dateAdded": "2026-07-27"
+  },
+  {
     "company": "Insight Global",
     "titleContains": ["soc analyst"],
     "status": "disqualified",

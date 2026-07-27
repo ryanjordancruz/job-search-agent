@@ -213,6 +213,12 @@ export function detectStateExclusion(description, candidateStateAbbr) {
 const HYBRID_PHRASES = ["hybrid", "partial remote", "partially remote"];
 const DAY_SCHEDULE_PATTERN = /\d+\s*days?\s*(?:onsite|on-site|in[\s-]office|in\s+the\s+office|remote)\b/i;
 
+// Immediately following a remote-term match, these nouns mean the sentence
+// is describing remote *support/users/sites* the role serves, not the
+// position's own work arrangement — e.g. "Remote support", "remote users",
+// "remote locations". Used in scorePosting's description-body remote check.
+const REMOTE_SUPPORT_CONTEXT = /^[\s:-]*(support|troubleshooting|assistance|access|help\s*desk|users?|workers?|employees?|clients?|customers?|locations?|sites?|offices?|branches?|teams?|colleagues?)\b/i;
+
 export function detectHybridSchedule(title, description) {
   const text = `${norm(title)} ${norm(description)}`;
   if (HYBRID_PHRASES.some((p) => containsTerm(text, p))) return true;
@@ -327,13 +333,27 @@ export function scorePosting(posting, profile) {
   // remote position" in the text, not the title/location fields. Guard
   // against negation ("not remote", "no remote work available") so a denial
   // doesn't get read as a confirmation.
+  //
+  // Description-body "remote" mentions are also frequently about the role
+  // supporting remote end-users/offices, not the position itself being
+  // remote — e.g. "support for local home workers... (Remote Support)" or
+  // "Remote support - Webconferencing support" on an onsite helpdesk req.
+  // Skip matches immediately followed by that kind of noun so an onsite
+  // role doesn't get flagged remote-eligible off a duty-list bullet. Scan
+  // every occurrence (not just the first) so a genuine remote-position
+  // mention elsewhere in the text still counts.
   const rawRemoteMatch = remoteOk && remoteTerms.some((t) => {
     if (containsTerm(loc, t) || containsTerm(title, t)) return true;
-    const re = new RegExp(`\\b${escapeRegex(t)}\\b`, "i");
-    const m = re.exec(desc);
-    if (!m) return false;
-    const before = desc.slice(Math.max(0, m.index - 20), m.index);
-    return !/\b(not|no|non-|isn't|won't be|without)\s*$/.test(before);
+    const re = new RegExp(`\\b${escapeRegex(t)}\\b`, "gi");
+    let m;
+    while ((m = re.exec(desc))) {
+      const before = desc.slice(Math.max(0, m.index - 20), m.index);
+      if (/\b(not|no|non-|isn't|won't be|without)\s*$/.test(before)) continue;
+      const after = desc.slice(m.index + m[0].length, m.index + m[0].length + 25);
+      if (REMOTE_SUPPORT_CONTEXT.test(after)) continue;
+      return true;
+    }
+    return false;
   });
   // A "remote" mention paired with hybrid/day-count schedule language isn't
   // full remote work — unless the posting is also local, where a hybrid
