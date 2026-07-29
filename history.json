@@ -348,5 +348,12 @@
     "status": "disqualified",
     "reason": "Adzuna tagged it remote-eligible but the real Dice posting is hybrid (4 days onsite/1 remote) in Carlsbad, CA, and requires 2+ years of direct vulnerability management experience plus required hands-on experience with an enterprise VM platform (Rapid7 InsightVM preferred, or Tenable Nessus/Qualys) — a named-tool and experience-depth gap the candidate doesn't have.",
     "dateAdded": "2026-07-29"
+  },
+  {
+    "company": "Las Vegas Sands",
+    "titleContains": ["analyst i", "cyber security"],
+    "status": "expired",
+    "reason": "Analyst I - Cyber Security (req R25_0448) closed before Ryan submitted, despite fully-tailored materials being ready since 2026-07-23. If it resurfaces under a new req number for the same team/title, treat as a new lead, not a repeat of this dead posting.",
+    "dateAdded": "2026-07-29"
   }
 ]
