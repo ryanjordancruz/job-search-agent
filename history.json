@@ -1,70 +1,94 @@
 [
   {
     "company": "Prudent Technologies and Consulting",
-    "titleContains": ["soc analyst"],
+    "titleContains": [
+      "soc analyst"
+    ],
     "status": "disqualified",
     "reason": "Title says \"L2& L3\" and scored well, but the real Dice posting is explicitly an L3 SOC Lead/Senior Analyst role requiring 6-10+ years of experience plus mentoring/escalation-management expertise. Contract, night shift (1-10am ET).",
     "dateAdded": "2026-07-27"
   },
   {
     "company": "TEKsystems",
-    "titleContains": ["it support analyst"],
+    "titleContains": [
+      "it support analyst"
+    ],
     "status": "disqualified",
     "reason": "Adzuna/scorer tags this \"Remote-eligible\" but the real Dice posting is fully onsite in Chicago, IL ($20-30/hr contract) — the description's \"Remote support\" bullet refers to supporting remote end-users, not a remote position. Also not local to Las Vegas. Resurfaces repeatedly under TEKsystems and \"TEKsystems c/o Allegis Group\" at different pay rates/req IDs for the same underlying onsite role.",
     "dateAdded": "2026-07-27"
   },
   {
     "company": "Kforce Technology Staffing",
-    "titleContains": ["it security analyst"],
+    "titleContains": [
+      "it security analyst"
+    ],
     "status": "disqualified",
     "reason": "Real Dice posting requires 3-5 years of cybersecurity experience plus healthcare/HIPAA-regulated-environment experience — a stretch past candidate's 2yr comfortable bar. Listed as \"Remote in Charlestown, MA\" but Dice's own workplace-type badge says \"On-site\".",
     "dateAdded": "2026-07-27"
   },
   {
     "company": "Kutir Inc",
-    "titleContains": ["fedramp"],
+    "titleContains": [
+      "fedramp"
+    ],
     "status": "disqualified",
     "reason": "Real Dice posting requires FedRAMP Certification plus hands-on Delinea/Thycotic Secret Server and PAM experience, Tenable/Wiz exposure management — a genuine named-tool gap, not a stretch.",
     "dateAdded": "2026-07-27"
   },
   {
     "company": "Insight Global",
-    "titleContains": ["it support analyst"],
+    "titleContains": [
+      "it support analyst"
+    ],
     "status": "disqualified",
     "reason": "Adzuna tags \"Remote-eligible\" but the real posting requires physical presence in the Houston office most days (L2 site support, executive white-glove support, MDF/IDF room work) — onsite, not remote.",
     "dateAdded": "2026-07-27"
   },
   {
     "company": "PSI Services",
-    "titleContains": ["federal", "soc engineer", "vulnerability"],
+    "titleContains": [
+      "federal",
+      "soc engineer",
+      "vulnerability"
+    ],
     "status": "disqualified",
     "reason": "\"Federal SOC Engineer Detect and Respond Analyst\" posting requires 7+ years as a Security/Systems Engineer, 3+ years with Proofpoint and 3+ years with CrowdStrike specifically, US citizenship, and ability to obtain federal security clearance. Same company's \"Federal Vulnerability Mgmt & App Security Engineer\" posting likely shares the same seniority/clearance bar.",
     "dateAdded": "2026-07-27"
   },
   {
     "company": "Insight Global",
-    "titleContains": ["soc analyst"],
+    "titleContains": [
+      "soc analyst"
+    ],
     "status": "disqualified",
     "reason": "Real posting (Remote SOC Analyst, Brunswick/Altama GA) requires 3-5 years Info Security/SOC experience, healthcare industry experience preferred, and certs like SSCP/GSEC/CISSP — well past candidate's 2yr comfortable bar.",
     "dateAdded": "2026-07-23"
   },
   {
     "company": "Naval Air Systems Command",
-    "titleContains": ["it specialist", "infosec"],
+    "titleContains": [
+      "it specialist",
+      "infosec"
+    ],
     "status": "disqualified",
     "reason": "USAJobs posting (Patuxent River, MD) 'This job is open to' section lists only internal federal employees, CTAP/ICTAP/RPL, land/base management, veterans, military spouses, and Schedule A disability hires — no general-public path, so candidate isn't eligible to apply at all. Also not actually remote (ad-hoc telework only) and requires GS-11-equivalent specialized experience plus security clearance.",
     "dateAdded": "2026-07-23"
   },
   {
     "company": "EMCOR Group",
-    "titleContains": ["identity and access management", "iam"],
+    "titleContains": [
+      "identity and access management",
+      "iam"
+    ],
     "status": "disqualified",
     "reason": "Real req needs 5yr Active Directory, 3yr Entra ID, 2yr Sentinel/Defender, 1yr PAM — none of which the candidate has. Keeps resurfacing under different titles/sources with the same disqualifying requirements.",
     "dateAdded": "2026-07-10"
   },
   {
     "company": "GAMA-1 Technologies",
-    "titleContains": ["security specialist"],
+    "titleContains": [
+      "security specialist"
+    ],
     "status": "disqualified",
     "reason": "Posts a full I/II/III/V ladder for the same IT Security Specialist – Compliance and Governance role family; the tier number doesn't reflect actual seniority. The \"I\" tier req itself requires 8+ years in cybersecurity governance/compliance and 5+ years in a senior IA/GRC/cybersecurity management role.",
     "dateAdded": "2026-07-12"
@@ -78,21 +102,27 @@
   },
   {
     "company": "Summit 7 Systems",
-    "titleContains": ["vulnerability"],
+    "titleContains": [
+      "vulnerability"
+    ],
     "status": "expired",
     "reason": "Stale/closed listing Adzuna keeps re-syndicating with a fresh posted-date. Summit 7's own ATS (isolvedhire.com) shows the matching req (\"Red Team Vulnerability Analyst — Remote, AL\", same $55k-75k band) as CLOSED.",
     "dateAdded": "2026-07-11"
   },
   {
     "company": "SAIC",
-    "titleContains": ["cybersecurity analyst"],
+    "titleContains": [
+      "cybersecurity analyst"
+    ],
     "status": "disqualified",
     "reason": "Adzuna's own structured field says \"Potential for Remote Work: ORA_ON_SITE\" (onsite, not remote) and the description text says \"seeking a senior network security analyst\" despite a clean-looking title. Confirmed on this exact title 2x (San Antonio, Fort Sam Houston).",
     "dateAdded": "2026-07-11"
   },
   {
     "company": "SAIC",
-    "titleContains": ["compliance analyst"],
+    "titleContains": [
+      "compliance analyst"
+    ],
     "status": "disqualified",
     "reason": "Adzuna's raw description field says \"Minimum Clearance Required: Top_Secret\" and \"Clearance Level Must Be Able to Obtain: TS/SCI\", plus \"Potential for Remote Work: ORA_ON_SITE\" — an active-clearance, onsite-only role, not the soft/open-to-obtain read the scorer originally gave it.",
     "dateAdded": "2026-07-13"
@@ -113,14 +143,18 @@
   },
   {
     "company": "Sunrise Systems",
-    "titleContains": ["vulnerability"],
+    "titleContains": [
+      "vulnerability"
+    ],
     "status": "disqualified",
     "reason": "Requires 3+ years plus named tools the candidate doesn't have (Qualys/Tenable/Nessus vs. candidate's Nmap/OpenVAS) — a real tool-depth gap, not just a stretch.",
     "dateAdded": "2026-07-10"
   },
   {
     "company": "cFocus Software",
-    "titleContains": ["vulnerability"],
+    "titleContains": [
+      "vulnerability"
+    ],
     "status": "disqualified",
     "reason": "NIH-contract vulnerability analyst postings require 5-7 years of experience.",
     "dateAdded": "2026-07-10"
@@ -148,35 +182,46 @@
   },
   {
     "company": "ReliaQuest",
-    "titleContains": ["greymatter", "grey matter"],
+    "titleContains": [
+      "greymatter",
+      "grey matter"
+    ],
     "status": "resubmission-blocked",
     "reason": "Candidate applied to this exact role (GreyMatter Specialist) in March 2026 and was rejected. Tried again ~4 months later under a different req number, but ReliaQuest's Workday ATS wouldn't allow a new submission at all — time elapsed and a different req number don't matter, Workday can block resubmission outright.",
     "dateAdded": "2026-07-10"
   },
   {
     "company": "TRIGYN Technologies",
-    "titleContains": ["splunk"],
+    "titleContains": [
+      "splunk"
+    ],
     "status": "disqualified",
     "reason": "Requires expert-level Splunk architecture/administration/clustering/index-management (beyond candidate's homelab-level exposure), and it's part-time (max 10 hrs/week), not full-time.",
     "dateAdded": "2026-07-12"
   },
   {
     "company": "Miracle Software Systems",
-    "titleContains": ["oracle"],
+    "titleContains": [
+      "oracle"
+    ],
     "status": "disqualified",
     "reason": "Requires 6+ years IT security/audit/controls plus 3+ years hands-on Oracle Fusion Cloud application security (Security Console, role-to-privilege mapping) — a different domain entirely, not a stretch.",
     "dateAdded": "2026-07-13"
   },
   {
     "company": "4 Consulting Inc",
-    "titleContains": ["information security analyst"],
+    "titleContains": [
+      "information security analyst"
+    ],
     "status": "disqualified",
     "reason": "Every live \"Information Security Analysts\" posting on 4Ci's own job portal shares identical generic boilerplate opening text but requires 5+ years of specialized enterprise experience (WAF admin, cloud security ops, or GCP IAM/Terraform/OAuth) once read in full.",
     "dateAdded": "2026-07-14"
   },
   {
     "company": "ManpowerGroup",
-    "titleContains": ["vulnerability management"],
+    "titleContains": [
+      "vulnerability management"
+    ],
     "status": "disqualified",
     "reason": "Real role (confirmed via Experis's own posting) requires the Brinqa vulnerability tool as a MUST HAVE (candidate has Nmap/OpenVAS/Wazuh, not Brinqa) plus financial-services/Enterprise Payments domain experience.",
     "dateAdded": "2026-07-14"
@@ -190,170 +235,262 @@
   },
   {
     "company": "Lumen",
-    "titleContains": ["assurance analyst", "audit"],
+    "titleContains": [
+      "assurance analyst",
+      "audit"
+    ],
     "status": "disqualified",
     "reason": "\"Cybersecurity Assurance Analyst (Audit)\" requires a Bachelor's + 6 years experience (or Master's + 4 years), plus 2-3 years of audit-framework experience (CMMC, SSAE 16, SOC 1/2, PCI, ISO, HIPAA, NACHA, SOX) and CISA/CISSP/GSEC/CISM certs — a senior compliance-auditor role, not an entry-level fit.",
     "dateAdded": "2026-07-15"
   },
   {
     "company": "Wynn",
-    "titleContains": ["infosec grc", "grc"],
+    "titleContains": [
+      "infosec grc",
+      "grc"
+    ],
     "status": "unverifiable",
     "reason": "Wynn's own SmartRecruiters ATS only has one InfoSec GRC req (\"Analyst - InfoSec GRC\", #744000114752877) and it's marked \"This job ad has expired\" directly on Wynn's site. No \"Engineer\" tier of the role appears anywhere on Wynn's live careers board — same stale-listing-with-fresh-date pattern as Summit 7. Even the Analyst tier needed 2 years hands-on audit/compliance plus GRC tooling (Archer/ServiceNow GRC/AuditBoard) the candidate hasn't used.",
     "dateAdded": "2026-07-15"
   },
   {
     "company": "ShorePoint",
-    "titleContains": ["clearance"],
+    "titleContains": [
+      "clearance"
+    ],
     "status": "disqualified",
     "reason": "Requires an active security clearance (Q Clearance).",
     "dateAdded": "2026-07-15"
   },
   {
     "company": "uvcyber",
-    "titleContains": ["sales"],
+    "titleContains": [
+      "sales"
+    ],
     "status": "disqualified",
     "reason": "Wrong domain — a sales/business-development role, not an analyst/technical one, despite matching the \"penetration testing\" skill keyword.",
     "dateAdded": "2026-07-15"
   },
   {
     "company": "AGR",
-    "titleContains": ["penetration", "red cell"],
+    "titleContains": [
+      "penetration",
+      "red cell"
+    ],
     "status": "disqualified",
     "reason": "Adzuna's company/location fields are wrong for this req — AGR is a staffing agency re-posting a role for the real employer, Internetwork Consulting Services (ICS). Real posting is onsite/situational-telework in Rosslyn, VA (must be local to the job site, despite Adzuna's \"Remote-eligible\" tag), requires an active Secret clearance, and requires one of CCNA Cyber Ops/CCNA-Security/CEH/CFR/Cloud+/CySA+/GCIA/GCIH/GICSP/SCYBER — not Security+.",
     "dateAdded": "2026-07-15"
   },
   {
     "company": "Internetwork Consulting Services",
-    "titleContains": ["penetration", "red cell"],
+    "titleContains": [
+      "penetration",
+      "red cell"
+    ],
     "status": "disqualified",
     "reason": "Same req as the AGR entry above (AGR appears to be a staffing agency re-posting for this employer) — active Secret clearance required, onsite/situational-telework in Rosslyn VA, and required certs (CCNA Cyber Ops/CCNA-Security/CEH/CFR/Cloud+/CySA+/GCIA/GCIH/GICSP/SCYBER) don't include Security+.",
     "dateAdded": "2026-07-15"
   },
   {
     "company": "Kastech",
-    "titleContains": ["it audit", "compliance analyst"],
+    "titleContains": [
+      "it audit",
+      "compliance analyst"
+    ],
     "status": "unverifiable",
     "reason": "\"IT Audit & Compliance Analyst - IRS 1075 / NIST\" posted identically across 5 unrelated small towns (Meridian AR, Tupelo MS, Jackson MS, Olive Branch MS, Hattiesburg MS). Kastech's own careers page (kastechssg.com) lists 7 real open roles (Programmer Analyst, PM I/II, Sr. App Developer I/II, Sr. Business/Functional Analyst I/II, all Richmond TX) — zero IT Audit/Compliance/NIST/IRS 1075 roles among them. Same fake/mismatched-listing pattern as North Texas Contracting.",
     "dateAdded": "2026-07-16"
   },
   {
     "company": "Career Soft Solutions",
-    "titleContains": ["epic security"],
+    "titleContains": [
+      "epic security"
+    ],
     "status": "disqualified",
     "reason": "\"Epic Security Analyst\" is Epic Systems EHR software access/build/provisioning work (Epic User Security/Data Courier certification), a healthcare-IT domain unrelated to information security despite the \"security\" keyword — not the candidate's field.",
     "dateAdded": "2026-07-17"
   },
   {
     "company": "SAIC",
-    "titleContains": ["sap security"],
+    "titleContains": [
+      "sap security"
+    ],
     "status": "disqualified",
     "reason": "Requires an active security clearance, per the scorer's clearance flag on this posting.",
     "dateAdded": "2026-07-17"
   },
   {
     "company": "GovCIO",
-    "titleContains": ["cyber threat analyst"],
+    "titleContains": [
+      "cyber threat analyst"
+    ],
     "status": "disqualified",
     "reason": "Requires an active security clearance.",
     "dateAdded": "2026-07-17"
   },
   {
     "company": "Gridiron IT Solutions",
-    "titleContains": ["compliance analyst"],
+    "titleContains": [
+      "compliance analyst"
+    ],
     "status": "disqualified",
     "reason": "Requires 10+ years of experience plus an active security clearance.",
     "dateAdded": "2026-07-17"
   },
   {
     "company": "Gulf Coast Automation Group",
-    "titleContains": ["information security analyst"],
+    "titleContains": [
+      "information security analyst"
+    ],
     "status": "applied",
     "reason": "This is TalentFish LLC's \"Information Security Analyst – SOC\" role (Adzuna details ID 5799558049, $100k-105k) listed under a client-facing company label instead of TalentFish's own name — same posting resurfaced under this exact label on both 2026-07-16 and 2026-07-17. Candidate already applied via Adzuna's apply flow on 2026-07-16. See job_talentfish_soc_analyst memory.",
     "dateAdded": "2026-07-17"
   },
   {
     "company": "Collabera",
-    "titleContains": ["cyber security engineer"],
+    "titleContains": [
+      "cyber security engineer"
+    ],
     "status": "disqualified",
     "reason": "Requires 5+ years of experience (confirmed by candidate reading the live posting) despite scoring well and reading clean in the aggregator listing.",
     "dateAdded": "2026-07-18"
   },
   {
     "company": "UnivEdge Consulting LLC",
-    "titleContains": ["soc analyst"],
+    "titleContains": [
+      "soc analyst"
+    ],
     "status": "disqualified",
     "reason": "Adzuna posting itself states 5+ years required (scorer already flagged this) — candidate's 2yr comfortable bar makes this too senior.",
     "dateAdded": "2026-07-18"
   },
   {
     "company": "Cresta",
-    "titleContains": ["compliance analyst"],
+    "titleContains": [
+      "compliance analyst"
+    ],
     "status": "disqualified",
     "reason": "Despite the \"Analyst\" title, this is a senior GRC/security-compliance program lead: 4+ years security governance/IT audit/compliance management required, stacked with 3+ years program management; end-to-end SOC 2 Type II/HITRUST/HIPAA/TISAX/ISO 27001/27701/42001/FedRAMP/PCI-DSS audit experience required; hands-on AWS/GCP/Azure cloud experience required. Confirmed live on Cresta's own Greenhouse board (job-boards.greenhouse.io/cresta/jobs/5013693008), not a mistag — the role itself is just too senior.",
     "dateAdded": "2026-07-20"
   },
   {
     "company": "V-Soft Consulting Group",
-    "titleContains": ["security analyst"],
+    "titleContains": [
+      "security analyst"
+    ],
     "status": "disqualified",
     "reason": "Staffing-agency listing (via Dice) for an unnamed 'premier client', 48-week W2 contract. Real requirement is 4-7 years of IAM/account-provisioning experience (grant/revoke access, account de-provisioning, security-rule maintenance) — an IAM operations role, not SOC/detection work, and well above candidate's comfortable experience bar.",
     "dateAdded": "2026-07-20"
   },
   {
     "company": "World Wide Technology",
-    "titleContains": ["infosec grc", "contract compliance"],
+    "titleContains": [
+      "infosec grc",
+      "contract compliance"
+    ],
     "status": "expired",
     "reason": "Real posting (via WayUp redirect from Adzuna) says \"Sorry, this listing is no longer accepting applications.\" Also preferred location is MO, not the Las Vegas/Henderson NV listed by Adzuna.",
     "dateAdded": "2026-07-21"
   },
   {
     "company": "Defense Health Agency",
-    "titleContains": ["security specialist", "insider threat"],
+    "titleContains": [
+      "security specialist",
+      "insider threat"
+    ],
     "status": "disqualified",
     "reason": "Requires ability to obtain/maintain Top Secret/SCI clearance, and the \"Who May Apply\" section restricts eligibility to specific federal employment-authority categories (current DoD/DHA civilian employees, military spouses, Schedule A, ICTAP, etc.) — not open to general public applicants.",
     "dateAdded": "2026-07-21"
   },
   {
     "company": "Apetan Consulting",
-    "titleContains": ["vulnerability management"],
+    "titleContains": [
+      "vulnerability management"
+    ],
     "status": "disqualified",
     "reason": "Real posting (via Dice) lists \"Experience Level: Intermediate (7-10)\" years and is explicitly \"On-site\", not remote — Adzuna's feed mistagged it remote-eligible.",
     "dateAdded": "2026-07-21"
   },
   {
     "company": "Radiology Partners",
-    "titleContains": ["it support analyst"],
+    "titleContains": [
+      "it support analyst"
+    ],
     "status": "applied",
     "reason": "Applied 2026-07-21 to \"IT Support Analyst II\" (req #20238) via the employer's own Avature ATS. Confirmed only that req is live on radpartners.avature.net — the plain \"IT Support Analyst\" (non-II) tier Adzuna keeps syndicating is stale/not a real req. Adzuna resurfaces both titles as multiple duplicate listing IDs.",
     "dateAdded": "2026-07-22"
   },
   {
     "company": "Canonical",
-    "titleContains": ["security risk management"],
+    "titleContains": [
+      "security risk management"
+    ],
     "status": "disqualified",
     "reason": "Read the real posting on Jobicy (jobs/149564) in full. Despite the \"Specialist\" title and no explicit years-of-experience number (so it slipped past the numeric filter), the actual duties are senior/strategic: define company-wide security risk standards, lead quantitative risk modeling (FAIR methodology), drive external thought leadership, leadership/management ability expected. Not an entry-level fit.",
     "dateAdded": "2026-07-22"
   },
   {
     "company": "Neos Consulting",
-    "titleContains": ["capps security analyst"],
+    "titleContains": [
+      "capps security analyst"
+    ],
     "status": "disqualified",
     "reason": "Real Dice posting is actually a \"Sr. Systems Analyst\" contract W2 role (\"highly advanced (senior-level) consultative services\") requiring deep Oracle PeopleSoft experience, SOD/RBAC security architecture ownership, and residency within 50 miles of Austin, TX — not the entry-level, remote-eligible \"CAPPS Security Analyst\" title/flag Adzuna showed.",
     "dateAdded": "2026-07-29"
   },
   {
     "company": "TEKsystems",
-    "titleContains": ["vulnerability management analyst"],
+    "titleContains": [
+      "vulnerability management analyst"
+    ],
     "status": "disqualified",
     "reason": "Adzuna tagged it remote-eligible but the real Dice posting is hybrid (4 days onsite/1 remote) in Carlsbad, CA, and requires 2+ years of direct vulnerability management experience plus required hands-on experience with an enterprise VM platform (Rapid7 InsightVM preferred, or Tenable Nessus/Qualys) — a named-tool and experience-depth gap the candidate doesn't have.",
     "dateAdded": "2026-07-29"
   },
   {
     "company": "Las Vegas Sands",
-    "titleContains": ["analyst i", "cyber security"],
+    "titleContains": [
+      "analyst i",
+      "cyber security"
+    ],
     "status": "expired",
     "reason": "Analyst I - Cyber Security (req R25_0448) closed before Ryan submitted, despite fully-tailored materials being ready since 2026-07-23. If it resurfaces under a new req number for the same team/title, treat as a new lead, not a repeat of this dead posting.",
     "dateAdded": "2026-07-29"
+  },
+  {
+    "company": "UnitedHealth Group",
+    "titleContains": [
+      "cybersecurity analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Req 2369993 (Las Vegas, Optum) posting page returned \"Custom Job Error: moved, deleted or does not exist\" when checked 2026-08-04, one day after Adzuna surfaced it as newly posted. Current site-wide search for cybersecurity analyst + Las Vegas shows no live entry-level match (only Senior/Prin tier roles, mostly Eden Prairie/Raleigh/remote). Treat as a dead listing unless it resurfaces with a new req number.",
+    "dateAdded": "2026-08-04"
+  },
+  {
+    "company": "Venterra Realty",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Real posting explicitly states \"LOCATION: Houston, Texas Corporate Office (Onsite)\" despite Adzuna tagging it Remote-eligible. Also requires 3+ years IT support/help desk experience, a stretch past the 2yr comfortable bar. Not local to Las Vegas.",
+    "dateAdded": "2026-08-04"
+  },
+  {
+    "company": "Howard University Hospital",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Real posting (job.brt.mv req 27782369) is a hands-on desktop support role in Washington, DC — hardware repairs/builds for desktops/laptops/tablets/printers, JAMF/SCCM OS image deployment, Mon-Fri 8:30-5 plus weekend as-needed. Not remote despite Adzuna's Remote-eligible flag; not local to Las Vegas. Same scorer-gap pattern as TEKsystems/Insight Global (aggregator remote tag contradicted by the real posting's own location/duties).",
+    "dateAdded": "2026-08-04"
+  },
+  {
+    "company": "FoodChain ID Group",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "applied",
+    "reason": "Applied 2026-08-04 to the remote part-time (~32hr/wk, ~$39k) IT Support Analyst role via the employer's own ATS (applytojob.com). Adzuna's original link token was dead/410'd but the same posting exists at a fresh URL — treat any resurfaced FoodChain ID IT Support Analyst listing as this same posting, not a new lead.",
+    "dateAdded": "2026-08-04"
   }
 ]
