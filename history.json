@@ -492,5 +492,32 @@
     "status": "applied",
     "reason": "Applied 2026-08-04 to the remote part-time (~32hr/wk, ~$39k) IT Support Analyst role via the employer's own ATS (applytojob.com). Adzuna's original link token was dead/410'd but the same posting exists at a fresh URL — treat any resurfaced FoodChain ID IT Support Analyst listing as this same posting, not a new lead.",
     "dateAdded": "2026-08-04"
+  },
+  {
+    "company": "KBTS Technologies",
+    "titleContains": [
+      "microsoft security analyst"
+    ],
+    "status": "unverifiable",
+    "reason": "Same fake/mismatched-listing pattern as North Texas Contracting/Kastech. KBTS's own careers page (kbtstech.com/careers.php) lists exactly one open req (Business Analyst II, requiring relocation to client sites, HQ Novi MI) — no Microsoft Security Analyst role, no Nevada location, anywhere on their real site.",
+    "dateAdded": "2026-09-03"
+  },
+  {
+    "company": "Tarrant Regional Water District",
+    "titleContains": [
+      "cyber security student assistant"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna mistagged location as Henderson/Clark County NV — real employer is based in Fort Worth, TX, not local to Las Vegas. \"Spring 2027\" naming and \"Student Assistant\" title strongly indicate a role tied to current academic enrollment, not a fit for a non-student full-time applicant.",
+    "dateAdded": "2026-09-03"
+  },
+  {
+    "company": "Western Area Power Administration",
+    "titleContains": [
+      "it cybersecurity specialist"
+    ],
+    "status": "disqualified",
+    "reason": "Confirmed open via USAJobs (closes 2026-09-09) but requires DOE \"Q Access Authorization\" clearance (hard blocker) and is NOT remote despite the Remote-eligible tag — physical presence required, situational telework only at management discretion. Also a GS-12-level federal specialized-experience bar, not truly entry-level.",
+    "dateAdded": "2026-09-03"
   }
 ]
