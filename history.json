@@ -519,5 +519,14 @@
     "status": "disqualified",
     "reason": "Confirmed open via USAJobs (closes 2026-09-09) but requires DOE \"Q Access Authorization\" clearance (hard blocker) and is NOT remote despite the Remote-eligible tag — physical presence required, situational telework only at management discretion. Also a GS-12-level federal specialized-experience bar, not truly entry-level.",
     "dateAdded": "2026-09-03"
+  },
+  {
+    "company": "cybersheath",
+    "titleContains": [
+      "cyber security analyst i"
+    ],
+    "status": "expired",
+    "reason": "Confirmed live and strongly qualifying (0-3 yrs SOC exp, fully remote, $60k-83k, no clearance/certs required) via direct fetch, but closed within ~20-30 minutes during the same review session — the job URL now redirects to cybersheath?error=true (Greenhouse's closed-req signal). Confirms the same fast-churn pattern noted on CyberSheath's board back in 2026-07-14 (a same-title req was already gone by the time it was checked then too). If this exact title reopens under a new req ID, treat as a fresh lead worth immediate same-day tailoring, not a repeat of this dead one.",
+    "dateAdded": "2026-09-03"
   }
 ]
