@@ -600,5 +600,14 @@
     "status": "disqualified",
     "reason": "Adzuna tagged Remote-eligible, but the real req is \"primarily onsite\" in Pennsylvania at a specialized corrections/detention-facility IT contract (PSDC SCCM/Airwatch/VDI, \"inmate computing environments\", requires fingerprinting/background check). Requires 3+ years relevant technical support experience (Ryan's bar is 2) plus enterprise SCCM/Airwatch/VDI administration Ryan hasn't done. High $92k salary reflects the specialized/cleared nature of the role, not typical entry-level helpdesk pay.",
     "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "Aristocrat Technologies",
+    "titleContains": [
+      "cyber compliance analyst"
+    ],
+    "status": "applied",
+    "reason": "Req R0022494, Las Vegas (local), Hybrid. Confirmed live via Aristocrat's own careers site immediately before tailoring. Real base pay range confirmed from the posting's own text: $94,500-$175,500/yr. Required: 2+ yrs info-sec audit/compliance PLUS practical experience participating in SOC 1/SOC 2/MUSL audits (a real gap - Ryan has none). Preferred cert Security+ (held). Tailored resume/cover letter built, cover letter discloses the audit-participation gap up front. Ryan applied 2026-09-14.",
+    "dateAdded": "2026-09-14"
   }
 ]
