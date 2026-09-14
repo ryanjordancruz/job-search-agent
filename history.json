@@ -528,5 +528,77 @@
     "status": "expired",
     "reason": "Confirmed live and strongly qualifying (0-3 yrs SOC exp, fully remote, $60k-83k, no clearance/certs required) via direct fetch, but closed within ~20-30 minutes during the same review session — the job URL now redirects to cybersheath?error=true (Greenhouse's closed-req signal). Confirms the same fast-churn pattern noted on CyberSheath's board back in 2026-07-14 (a same-title req was already gone by the time it was checked then too). If this exact title reopens under a new req ID, treat as a fresh lead worth immediate same-day tailoring, not a repeat of this dead one.",
     "dateAdded": "2026-09-03"
+  },
+  {
+    "company": "NovaLink Solutions",
+    "titleContains": [
+      "security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna tagged Remote-eligible, but the matching real Dice listing (Madison, WI market — Fitchburg is a Madison suburb) explicitly states \"Full-time, no remote work available.\" Recurring req posted across multiple cities (Madison WI, West Columbia SC, Phoenix AZ) as a state-Medicaid-eligibility-system (MARS-E/ARC-AMPE) compliance contractor. Skills otherwise matched reasonably well (Security+, NIST, vuln mgmt) — the mistagged-remote status is the sole disqualifier.",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "Apex Systems",
+    "titleContains": [
+      "ot compliance"
+    ],
+    "status": "disqualified",
+    "reason": "Real, live, well-paying (confirmed $65-80/hr, well above Adzuna's stated $104k) req supporting a midstream oil/gas pipeline operator's OT/ICS compliance team. Requires hands-on NIST AND IEC 62443 (industrial control systems security standard) experience — a specialized OT/ICS domain Ryan has zero exposure to. The \"NIST\" keyword match was a false positive; Ryan's background is enterprise IT security, not OT/SCADA.",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "SolutionIT",
+    "titleContains": [
+      "iam audit"
+    ],
+    "status": "disqualified",
+    "reason": "Real, live req (also re-posted by TEKsystems under an identical title, shared staffing-agency client). Requires 5+ years dedicated IAM/IT Audit/Compliance experience plus a Bachelor's degree — more than double Ryan's 2-yr comfortable bar, and the substance is audit/governance (evidence collection, control testing) rather than hands-on security ops.",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "Jun Cyber",
+    "titleContains": [
+      "grc analysts i"
+    ],
+    "status": "disqualified",
+    "reason": "Real company (St. Petersburg FL GRC consulting firm) and a genuine security-domain GRC role (not a false-positive adjacent-domain hit) — years/certs would have matched well. But Adzuna's fetched page itself states \"St. Petersburg, Florida (Hybrid; local applicants only)\", directly contradicting the Remote-eligible tag. Ryan is Las Vegas-based, not local, not relocating.",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "HackerOne",
+    "titleContains": [
+      "product security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Real, live req confirmed on HackerOne's own Ashby ATS board. NEW SCORER GAP: this is a hub-restricted remote posting (\"targeted for candidates within ~50 miles of Boston, Austin, DC, Seattle, or SF Bay Area\", with pay tiers split by hub) — Las Vegas isn't near any of the five hubs. The scorer's Remote-eligible flag doesn't distinguish nationwide-remote from hub-restricted-remote; worth adding detection for \"within X miles of [city list]\" phrasing if this pattern recurs. Secondary gap: also requires 3+ yrs hands-on security testing/vuln research (a stretch past Ryan's 2-yr bar even ignoring location).",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "INSPYR Solutions",
+    "titleContains": [
+      "information security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Scored 50 on title-match alone with zero matched skills (a recurring weak-signal pattern per Lumen/Wynn precedent). INSPYR's actual current listings in this title family are both hybrid-onsite, not remote: \"Information Security Analyst III\" (Houston, senior-tier, incident-response program ownership) and \"Offensive Security Analyst\" (Deerfield Beach, requires a software engineering background). No live remote entry-level req exists matching Adzuna's listing.",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "HAYS",
+    "titleContains": [
+      "concur support"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna tagged location as North Carolina, but the matching real HAYS req (found via Dice/Indeed/ZipRecruiter cross-search) resolves to Carolina, PUERTO RICO — likely an Adzuna location-parser substring mismatch (\"Carolina\"). Also a lower-paying contract ($18-20/hr, ~$37k-42k annualized vs Adzuna's stated $46k) requiring SAP Concur-specific application-support experience Ryan doesn't have.",
+    "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "vTech Solution",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna tagged Remote-eligible, but the real req is \"primarily onsite\" in Pennsylvania at a specialized corrections/detention-facility IT contract (PSDC SCCM/Airwatch/VDI, \"inmate computing environments\", requires fingerprinting/background check). Requires 3+ years relevant technical support experience (Ryan's bar is 2) plus enterprise SCCM/Airwatch/VDI administration Ryan hasn't done. High $92k salary reflects the specialized/cleared nature of the role, not typical entry-level helpdesk pay.",
+    "dateAdded": "2026-09-14"
   }
 ]
