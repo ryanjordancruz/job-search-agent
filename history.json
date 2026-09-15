@@ -627,5 +627,15 @@
     "status": "disqualified",
     "reason": "Deep-dive verified 2026-09-14 as a soft-clearance QUALIFY, but the years/degree requirement text was truncated in that pass. Re-verified live 2026-09-15 via ClearanceJobs (req still open, $75k-95k, fully remote, clearance genuinely soft - 'eligible for a Public Trust', not active): full posting requires 4+ years in data analysis/security operations/infrastructure support (double Ryan's 2-yr comfortable bar) PLUS a Bachelor's degree in CS/Information Systems/Cybersecurity/Data Analytics or related field. Ryan's Bachelor's is in Business, not a clean match to the listed fields. Two stacked gaps (years + degree-field) - Ryan chose to skip rather than disclose both.",
     "dateAdded": "2026-09-15"
+  },
+  {
+    "company": "Dragonfli Group",
+    "titleContains": [
+      "grc analyst",
+      "governance and compliance analyst"
+    ],
+    "status": "expired",
+    "reason": "Ryan brought this Indeed posting directly (not from job-search-agent's own sources). Confirmed dead via two independent checks: Dragonfli's own careers page (dragonfligroup.com/careers) shows the GRC category as \"No Active Roles\", and their actual Comeet ATS backend (comeet.com/jobs/dragonfligroup) says \"there are currently no open positions\" company-wide. Even setting the dead listing aside, two real Must-Have gaps if it reopens: Bachelor's degree required 'in cybersecurity, information technology, or a related field' (Ryan's is Business - same mismatch pattern as Blu Omega same day) and 'Exposure to Assessment and Authorization (RMF) work' as a must-have - RMF/NIST 800-37 is a distinct framework from the NIST CSF/MITRE ATT&CK material Ryan has studied, zero exposure. Security+ and remote/GRC interest area were a good fit otherwise.",
+    "dateAdded": "2026-09-15"
   }
 ]
