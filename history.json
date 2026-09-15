@@ -637,5 +637,14 @@
     "status": "expired",
     "reason": "Ryan brought this Indeed posting directly (not from job-search-agent's own sources). Confirmed dead via two independent checks: Dragonfli's own careers page (dragonfligroup.com/careers) shows the GRC category as \"No Active Roles\", and their actual Comeet ATS backend (comeet.com/jobs/dragonfligroup) says \"there are currently no open positions\" company-wide. Even setting the dead listing aside, two real Must-Have gaps if it reopens: Bachelor's degree required 'in cybersecurity, information technology, or a related field' (Ryan's is Business - same mismatch pattern as Blu Omega same day) and 'Exposure to Assessment and Authorization (RMF) work' as a must-have - RMF/NIST 800-37 is a distinct framework from the NIST CSF/MITRE ATT&CK material Ryan has studied, zero exposure. Security+ and remote/GRC interest area were a good fit otherwise.",
     "dateAdded": "2026-09-15"
+  },
+  {
+    "company": "City of Las Vegas",
+    "titleContains": [
+      "it security analyst i"
+    ],
+    "status": "expired",
+    "reason": "Ryan brought this Indeed posting directly (Job #26AUG80021, $71,134-$92,474, 495 S. Main St, Las Vegas - local, Dept of Innovation and Technology). Confirmed closed: posting's own closing date was 9/4/2026 2:00 PM Pacific (11 days before this check), no Apply button present on the live page, and searching the City's own current 22-job listing for \"Security Analyst\" returns zero matches. The description's boilerplate \"will remain open until sufficient pool\" line did not override the actual closing date. STRONG FIT IF IT REOPENS: duties (vuln mgmt, threat/incident response, network security monitoring, documentation/policy) map closely to Ryan's homelab work, and Security+ is explicitly on the preferred-cert list. Two real gaps to watch: requires 3 years of general IT experience (Ryan's comfortable bar is 2, and it's unclear he has 3 yrs of general IT-titled work history outside the homelab), and wants a Bachelor's major in CS/telecom/MIS/related (Ryan's is Business) - though the posting explicitly allows substituting equivalent education+experience (1.5 yrs exp = 1 yr education), more flexible than the Blu Omega/Dragonfli degree language seen the same day. City of Las Vegas tends to re-run recruitments periodically - watch for a new job number with the same title/department.",
+    "dateAdded": "2026-09-15"
   }
 ]
