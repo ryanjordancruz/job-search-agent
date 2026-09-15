@@ -609,5 +609,23 @@
     "status": "applied",
     "reason": "Req R0022494, Las Vegas (local), Hybrid. Confirmed live via Aristocrat's own careers site immediately before tailoring. Real base pay range confirmed from the posting's own text: $94,500-$175,500/yr. Required: 2+ yrs info-sec audit/compliance PLUS practical experience participating in SOC 1/SOC 2/MUSL audits (a real gap - Ryan has none). Preferred cert Security+ (held). Tailored resume/cover letter built, cover letter discloses the audit-participation gap up front. Ryan applied 2026-09-14.",
     "dateAdded": "2026-09-14"
+  },
+  {
+    "company": "Blue Cloud",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "expired",
+    "reason": "Deep-dive verified as a clean QUALIFY on 2026-09-14 but never tailored yet, so re-verified live before tailoring on 2026-09-15 per standard practice. Adzuna/freehire.me both still show it with a fresh posted-date (Sep 5), but Blue Cloud's own live UKG job board (209 open reqs, searched directly for \"IT Support Analyst\") has zero matching req, and the specific UKG opportunityId referenced by mirrors returns \"This opportunity is currently not available.\" Same stale-listing-with-fresh-date pattern as Summit 7/Wynn/World Wide Technology. If it resurfaces under a new req ID on Blue Cloud's own board, treat as a fresh lead, not a repeat of this dead one.",
+    "dateAdded": "2026-09-15"
+  },
+  {
+    "company": "Blu Omega LLC",
+    "titleContains": [
+      "cybersecurity analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Deep-dive verified 2026-09-14 as a soft-clearance QUALIFY, but the years/degree requirement text was truncated in that pass. Re-verified live 2026-09-15 via ClearanceJobs (req still open, $75k-95k, fully remote, clearance genuinely soft - 'eligible for a Public Trust', not active): full posting requires 4+ years in data analysis/security operations/infrastructure support (double Ryan's 2-yr comfortable bar) PLUS a Bachelor's degree in CS/Information Systems/Cybersecurity/Data Analytics or related field. Ryan's Bachelor's is in Business, not a clean match to the listed fields. Two stacked gaps (years + degree-field) - Ryan chose to skip rather than disclose both.",
+    "dateAdded": "2026-09-15"
   }
 ]
