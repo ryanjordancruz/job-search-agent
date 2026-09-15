@@ -646,5 +646,14 @@
     "status": "expired",
     "reason": "Ryan brought this Indeed posting directly (Job #26AUG80021, $71,134-$92,474, 495 S. Main St, Las Vegas - local, Dept of Innovation and Technology). Confirmed closed: posting's own closing date was 9/4/2026 2:00 PM Pacific (11 days before this check), no Apply button present on the live page, and searching the City's own current 22-job listing for \"Security Analyst\" returns zero matches. The description's boilerplate \"will remain open until sufficient pool\" line did not override the actual closing date. STRONG FIT IF IT REOPENS: duties (vuln mgmt, threat/incident response, network security monitoring, documentation/policy) map closely to Ryan's homelab work, and Security+ is explicitly on the preferred-cert list. Two real gaps to watch: requires 3 years of general IT experience (Ryan's comfortable bar is 2, and it's unclear he has 3 yrs of general IT-titled work history outside the homelab), and wants a Bachelor's major in CS/telecom/MIS/related (Ryan's is Business) - though the posting explicitly allows substituting equivalent education+experience (1.5 yrs exp = 1 yr education), more flexible than the Blu Omega/Dragonfli degree language seen the same day. City of Las Vegas tends to re-run recruitments periodically - watch for a new job number with the same title/department.",
     "dateAdded": "2026-09-15"
+  },
+  {
+    "company": "JT4 LLC",
+    "titleContains": [
+      "cybersecurity analyst i"
+    ],
+    "status": "disqualified",
+    "reason": "Ryan brought this Indeed posting directly. Confirmed real and live via JT4's own ADP career site (myjobs.adp.com, Req #12346, Las Vegas NV - supports USAF/Space Force/Navy western test ranges under the J-Tech II contract). Genuinely strong fit otherwise: explicitly entry-level ('under close supervision'), $80k-100k, local, degree line allows 'equivalent academic/technical training/certification' in place of an exact CS/IT/IA Bachelor's, 1+ yr security experience easily met, and Security+ (held) directly satisfies the DoD 8570.01-M IAT Level I requirement. Two real stacked gaps, both phrased as requirements: (1) requires a SECOND certification beyond Security+ - minimum one of A+CE/CCNA-Security/CND/Network+CE/SSCP - Ryan holds none of these; (2) requires 'conceptual knowledge of RMF process, eMASS, ACAS, SCAP, STIG, CRA, and CTT' - same RMF/NIST-800-37 gap flagged for Dragonfli Group the same day, a distinct framework from the NIST CSF/MITRE ATT&CK material Ryan has studied. Generic company boilerplate also notes 'some jobs may require eligibility for a government security clearance' (not stated as a hard requirement for this specific req). Ryan chose to skip rather than disclose both gaps.",
+    "dateAdded": "2026-09-15"
   }
 ]
