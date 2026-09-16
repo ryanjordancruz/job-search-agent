@@ -6,8 +6,28 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const HISTORY_PATH = join(root, "history.json");
 
+// Some sources (seen from Adzuna) serve mojibake: a UTF-8-encoded name gets
+// misread as Latin-1 somewhere upstream, turning "Jün Cyber" into "JÃ¼n
+// Cyber". Round-tripping through Latin-1 undoes that when it applies; on an
+// already-correct string the round-trip either leaves it unchanged or
+// produces invalid UTF-8 (U+FFFD), so it's safe to only use the repaired
+// version when it's different and clean.
+function repairMojibake(s) {
+  try {
+    const repaired = Buffer.from(s, "latin1").toString("utf8");
+    if (repaired !== s && !repaired.includes("�")) return repaired;
+  } catch {
+    // fall through to original string
+  }
+  return s;
+}
+
+function stripDiacritics(s) {
+  return s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+}
+
 function normalize(s) {
-  return (s ?? "")
+  return stripDiacritics(repairMojibake(s ?? ""))
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
