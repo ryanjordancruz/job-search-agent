@@ -655,5 +655,14 @@
     "status": "disqualified",
     "reason": "Ryan brought this Indeed posting directly. Confirmed real and live via JT4's own ADP career site (myjobs.adp.com, Req #12346, Las Vegas NV - supports USAF/Space Force/Navy western test ranges under the J-Tech II contract). Genuinely strong fit otherwise: explicitly entry-level ('under close supervision'), $80k-100k, local, degree line allows 'equivalent academic/technical training/certification' in place of an exact CS/IT/IA Bachelor's, 1+ yr security experience easily met, and Security+ (held) directly satisfies the DoD 8570.01-M IAT Level I requirement. Two real stacked gaps, both phrased as requirements: (1) requires a SECOND certification beyond Security+ - minimum one of A+CE/CCNA-Security/CND/Network+CE/SSCP - Ryan holds none of these; (2) requires 'conceptual knowledge of RMF process, eMASS, ACAS, SCAP, STIG, CRA, and CTT' - same RMF/NIST-800-37 gap flagged for Dragonfli Group the same day, a distinct framework from the NIST CSF/MITRE ATT&CK material Ryan has studied. Generic company boilerplate also notes 'some jobs may require eligibility for a government security clearance' (not stated as a hard requirement for this specific req). Ryan chose to skip rather than disclose both gaps.",
     "dateAdded": "2026-09-15"
+  },
+  {
+    "company": "Savi Gurus",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna tagged Remote-eligible, but the real posting explicitly states 'This is not a remote position' - onsite at a client location in Webster Groves/St. Louis, MO. $40,302/yr, 2-3 yrs Service Desk/IT Support experience required. Not local to Las Vegas.",
+    "dateAdded": "2026-09-16"
   }
 ]
