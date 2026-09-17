@@ -664,5 +664,61 @@
     "status": "disqualified",
     "reason": "Adzuna tagged Remote-eligible, but the real posting explicitly states 'This is not a remote position' - onsite at a client location in Webster Groves/St. Louis, MO. $40,302/yr, 2-3 yrs Service Desk/IT Support experience required. Not local to Las Vegas.",
     "dateAdded": "2026-09-16"
+  },
+  {
+    "company": "Software Guidance & Assistance",
+    "titleContains": [
+      "application security vulnerability analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Real, live remote role (EST business hours) for an unnamed insurance-services client, staffed by SGA. Core duties are SAST/SCA/AI-based application-security code scanning - AppSec/code-review work, not the infrastructure/network security monitoring Ryan's actual skills (Wazuh SIEM, Nmap, OpenVAS, Wireshark) cover. Comparable SGA AppSec postings require 3+ years hands-on SAST/SCA experience. Same domain mismatch as Sunrise Systems/TRIGYN's named-tool gaps, just in the AppSec direction.",
+    "dateAdded": "2026-09-17"
+  },
+  {
+    "company": "Perennial Resources International",
+    "titleContains": [
+      "application vulnerability analyst",
+      "owasp"
+    ],
+    "status": "disqualified",
+    "reason": "Real, live 6+ month contract (via freehire.me mirror) for a Midtown Manhattan client, remote but requires EST hours, US citizen/green-card only (no visa sponsorship). $120k salary and industry-wide norms for this AppSec/SAST-DAST-SCA job family (5+ years typical) both point to a mid/senior role behind a generic-sounding title - same shape as ReliaQuest/SAIC/GAMA-1. Exact years text was truncated in every source found, so not 100% confirmed, but strongly leaning disqualify.",
+    "dateAdded": "2026-09-17"
+  },
+  {
+    "company": "TalTeam",
+    "titleContains": [
+      "security analyst iii",
+      "vulnerability management"
+    ],
+    "status": "disqualified",
+    "reason": "Real req (Canton, OH, remote-eligible, confirmed via Dice + a duplicate V-Soft Consulting repost of the same client req) requires 3+ years vulnerability management experience with named tools Qualys/Tenable/Nessus - Ryan's hands-on tools are Nmap/OpenVAS/Wazuh, a different toolchain. Same tool-gap pattern as Sunrise Systems. The 'Analyst III' tier itself wasn't a hidden senior trap this time - the 3+ yr bar was explicit and modest - but the tool gap alone disqualifies.",
+    "dateAdded": "2026-09-17"
+  },
+  {
+    "company": "Apex Systems",
+    "titleContains": [
+      "incident response"
+    ],
+    "status": "expired",
+    "reason": "Adzuna listing (Warrenville, IL, $125k, Remote-eligible) points to a req that returns 404 on Apex's own careers site (apexsystems.com) - the req is dead and Adzuna is serving a stale mirror with a fresh posted-date, same pattern as Summit 7/Wynn/Blue Cloud. Apex's current live incident-response openings are all DoD/clearance-track roles (Dahlgren VA, Alexandria VA), nothing matching this listing.",
+    "dateAdded": "2026-09-17"
+  },
+  {
+    "company": "Ledgent Technology",
+    "titleContains": [
+      "ai security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Real, live, fully remote role ($104k-135k, confirmed via freehire.me mirror + a parallel Irvine Technology Corporation repost of the same client req). Despite the generic-sounding title, this is specialized AI-governance/risk work - evaluating AI-generated code and AI-enabled systems against NIST AI RMF/HITRUST in a HIPAA-regulated environment - not SOC/SIEM analyst work. Zero overlap with Ryan's Wazuh/homelab background, which is why it scored zero matched skills (a real signal here, not a scorer gap).",
+    "dateAdded": "2026-09-17"
+  },
+  {
+    "company": "Morph Enterprise LLC",
+    "titleContains": [
+      "vulnerability management"
+    ],
+    "status": "disqualified",
+    "reason": "Real staffing consultancy (morphenterprise.com), real-looking posting located in Jackson, Jackson County, OH (not MS/MI). Requires 3+ years vulnerability management experience specifically with Qualys/Tenable/Nessus - Ryan's hands-on tools are Nmap/OpenVAS/Wazuh, same tool-gap pattern as Sunrise Systems/TalTeam. Years also exceed Ryan's 2-yr comfortable bar.",
+    "dateAdded": "2026-09-17"
   }
 ]
