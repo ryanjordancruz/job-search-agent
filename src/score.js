@@ -268,6 +268,31 @@ function extractStateFromToken(token) {
   return null;
 }
 
+// Companies hiring internationally (surfaced by the SmartRecruiters/Workable
+// sources, which pull global boards, unlike Adzuna/USAJobs/Remotive/Jobicy
+// which are already US-scoped) often list a foreign city/country in the
+// location field and still say "remote" in the text — but that's remote
+// *within that country/region*, not remote for a US-based candidate. Checked
+// against the location field only (not the description), since duty text
+// legitimately mentions other countries all the time (global clients, etc.)
+// without the role itself being based there.
+const NON_US_COUNTRY_TERMS = [
+  "greece", "united kingdom", "germany", "france", "spain", "italy", "portugal",
+  "netherlands", "belgium", "poland", "romania", "bulgaria", "ireland", "sweden",
+  "norway", "denmark", "finland", "switzerland", "austria", "czech republic",
+  "hungary", "ukraine", "india", "pakistan", "philippines", "mexico", "brazil",
+  "argentina", "colombia", "chile", "canada", "australia", "new zealand",
+  "south africa", "nigeria", "egypt", "united arab emirates", "saudi arabia",
+  "israel", "turkey", "japan", "china", "singapore", "malaysia", "indonesia",
+  "vietnam", "thailand", "south korea", "kenya",
+];
+
+export function detectNonUsLocation(location) {
+  const loc = norm(location);
+  const country = NON_US_COUNTRY_TERMS.find((c) => containsTerm(loc, c));
+  return { isNonUs: Boolean(country), country: country ?? null };
+}
+
 export function detectResidencyRequirement(description, candidateStateAbbr) {
   const text = norm(description);
   for (const pattern of RESIDENCY_PATTERNS) {
@@ -317,6 +342,18 @@ export function scorePosting(posting, profile) {
         flags: [`Excluded: posting requires ${residency.requiredState} residency (candidate is in ${profile.stateAbbreviation})`],
       };
     }
+  }
+
+  // Hard exclude: posting's own location names a country other than the US
+  // (see detectNonUsLocation) — "remote" text elsewhere in the posting means
+  // remote within that country/region, not remote for a US-based candidate.
+  const nonUsLocation = detectNonUsLocation(posting.location);
+  if (nonUsLocation.isNonUs) {
+    return {
+      score: -1,
+      matchedSkills: [],
+      flags: [`Excluded: posting is based in ${nonUsLocation.country} (candidate is US-based)`],
+    };
   }
 
   // Location gate: remote postings stay eligible nationwide, but anything

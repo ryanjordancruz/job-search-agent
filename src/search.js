@@ -8,6 +8,8 @@ import { searchRemotive } from "./sources/remotive.js";
 import { searchJobicy } from "./sources/jobicy.js";
 import { searchGreenhouse } from "./sources/greenhouse.js";
 import { searchLever } from "./sources/lever.js";
+import { searchSmartrecruiters } from "./sources/smartrecruiters.js";
+import { searchWorkable } from "./sources/workable.js";
 import { scorePosting } from "./score.js";
 import { loadHistory, findHistoryMatch } from "./history.js";
 
@@ -82,6 +84,18 @@ async function collectAll() {
     const lv = await searchLever(site);
     if (lv.skipped) notes.push(`[Lever] ${lv.reason}`);
     all.push(...lv.results);
+  }
+
+  for (const companyId of search.smartrecruitersCompanies ?? []) {
+    const sr = await searchSmartrecruiters(companyId);
+    if (sr.skipped) notes.push(`[SmartRecruiters] ${sr.reason}`);
+    all.push(...sr.results);
+  }
+
+  for (const subdomain of search.workableAccounts ?? []) {
+    const wk = await searchWorkable(subdomain);
+    if (wk.skipped) notes.push(`[Workable] ${wk.reason}`);
+    all.push(...wk.results);
   }
 
   // dedupe notes

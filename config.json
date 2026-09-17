@@ -85,6 +85,8 @@
       "resultsPerQuery": 30
     },
     "greenhouseBoards": ["versprite", "cybersheath", "smartsheet", "onepath", "tactacam"],
-    "leverBoards": ["uvcyber", "contentsquare"]
+    "leverBoards": ["uvcyber", "contentsquare"],
+    "smartrecruitersCompanies": ["WynnResorts"],
+    "workableAccounts": ["techflow", "first-division-consulting", "infystrat", "symmetrio", "obrela-security-industries-sa", "sigmadefense", "saalex", "evolve-security", "sphynx"]
   }
 }

@@ -12,7 +12,7 @@ Auto-submitting applications is high-risk and hard to reverse: a bad match or a 
 - **USAJobs** — federal government postings, free API.
 - **Remotive** — remote-only listings, free, no API key required. Queried once per search term (not per location) since every listing is already remote.
 - **Jobicy** — remote-only listings, free, no API key required. Queried once per search term the same way as Remotive, scoped to `geo=usa`.
-- **Greenhouse / Lever** — no API key needed, but only searches specific companies' boards you add to `config.json` (`search.greenhouseBoards`, `search.leverBoards`). Find a company's board token/site from their careers page URL, e.g. `boards.greenhouse.io/<token>` or `jobs.lever.co/<site>`.
+- **Greenhouse / Lever / SmartRecruiters / Workable** — no API key needed, but only search specific companies' boards you add to `config.json` (`search.greenhouseBoards`, `search.leverBoards`, `search.smartrecruitersCompanies`, `search.workableAccounts`). Find a company's board token/site/account from their careers page URL, e.g. `boards.greenhouse.io/<token>`, `jobs.lever.co/<site>`, `apply.workable.com/<account>`. SmartRecruiters is the odd one out — its `companyId` is an internal identifier, not always the same as the public careers-page URL slug (e.g. Wynn Las Vegas's is `WynnResorts`, not `wynnlasvegas`); verify with a direct `GET https://api.smartrecruiters.com/v1/companies/<id>/postings` call before adding one.
 
 LinkedIn and Indeed are deliberately excluded — both prohibit automated scraping in their terms of service and can flag or suspend accounts for bot-like activity.
 
