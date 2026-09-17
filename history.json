@@ -666,6 +666,15 @@
     "dateAdded": "2026-09-16"
   },
   {
+    "company": "Symmetrio",
+    "titleContains": [
+      "tenable vulnerability management engineer"
+    ],
+    "status": "disqualified",
+    "reason": "Confirmed live and real via a direct Workable API fetch (job-search-agent's first result from the new Workable source). Genuine remote role, $115k-130k, no clearance requirement. But it's a senior, deep-specialization Tenable platform engineer role, not entry-level vuln management: requires 3-5 years hands-on engineering across Tenable.io/Nessus/Web App Scanning/APIs/automation (explicitly 'not simply a scanner operator... an engineer and program builder'), plus advanced PowerShell/Python scripting for building automation pipelines. Ryan's hands-on tools are Nmap/OpenVAS, not Tenable - same named-tool-gap pattern as Sunrise Systems/TalTeam/Morph Enterprise, but noticeably deeper/more senior than those.",
+    "dateAdded": "2026-09-17"
+  },
+  {
     "company": "Software Guidance & Assistance",
     "titleContains": [
       "application security vulnerability analyst"
