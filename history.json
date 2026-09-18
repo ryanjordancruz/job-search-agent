@@ -666,6 +666,15 @@
     "dateAdded": "2026-09-16"
   },
   {
+    "company": "Thrive",
+    "titleContains": [
+      "incident response analyst"
+    ],
+    "status": "applied",
+    "reason": "Found by Ryan on LinkedIn (not job-search-agent's own pipeline), verified live via Thrive's own Workable ATS (apply.workable.com/j/750FACE626, posted 2026-09-16). Real stretch (no explicit years stated but reads above entry-level: 'expertise' in forensics/malware analysis, 'lead' IR for High Priority incidents, playbook development; concrete gap is no professional system-administration title) - Ryan chose to proceed anyway. Tailored resume/cover letter built, cover letter discloses the sysadmin-experience gap up front. Applied 2026-09-18. Note: this is the base/standard tier - Thrive also separately posts 'Incident Response Analyst - Team Lead' and '- Weekend Shift' variants of the same role family.",
+    "dateAdded": "2026-09-18"
+  },
+  {
     "company": "Symmetrio",
     "titleContains": [
       "tenable vulnerability management engineer"
