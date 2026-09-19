@@ -738,5 +738,23 @@
     "status": "disqualified",
     "reason": "Real staffing consultancy (morphenterprise.com), real-looking posting located in Jackson, Jackson County, OH (not MS/MI). Requires 3+ years vulnerability management experience specifically with Qualys/Tenable/Nessus - Ryan's hands-on tools are Nmap/OpenVAS/Wazuh, same tool-gap pattern as Sunrise Systems/TalTeam. Years also exceed Ryan's 2-yr comfortable bar.",
     "dateAdded": "2026-09-17"
+  },
+  {
+    "company": "Clear Capital",
+    "titleContains": [
+      "grc security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Live on Lever (posted ~2026-06-17, Adzuna re-dated) and genuinely remote, but a mid/senior GRC role behind an Analyst title: requires 5+ yrs GRC/security compliance/risk (or 3 + Master's), CISSP/CISM/CISA/CRISC/AIGP-tier cert, full knowledge of SOC 2/ISO 27001/GLBA/GDPR/CCPA plus NIST RMF, leading audit prep/vendor risk, and Vanta/Drata/OneTrust. Four stacked gaps vs. Ryan (Security+ only, no audit/GRC-platform experience).",
+    "dateAdded": "2026-09-19"
+  },
+  {
+    "company": "Stefanini",
+    "titleContains": [
+      "information security analyst"
+    ],
+    "status": "expired",
+    "reason": "LinkedIn copy says 'No longer accepting applications' (posted ~Aug 8 2026; Adzuna re-dated to Sep 8). W2 contract via recruiter, end client not named. Even if live: 3-5+ yrs plus FISMA/NIST Security Control Assessor work (same RMF/assessment gap as Dragonfli/JT4), remote status unconfirmed. Logged expired not disqualified since Stefanini re-posts this req family - re-verify if it resurfaces.",
+    "dateAdded": "2026-09-19"
   }
 ]
