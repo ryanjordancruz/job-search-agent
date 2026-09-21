@@ -762,8 +762,8 @@
     "titleContains": [
       "associate cybersecurity analyst"
     ],
-    "status": "applied",
-    "reason": "Found by Ryan on LinkedIn (not job-search-agent's own pipeline). Req R-2026-72162, remote (Nevada eligible), $73,600-$81,800. Verified live via Southwest's Workday (canApply true, ends 2026-09-22); careers.southwestair.com page showed \"closed\" at the same time (page lag, Workday is the source of truth). Entry-level IAM/PAM operations role. Real stretch: all required items met, but no CyberArk/Idira or SphereBoard, no AD/Entra ID, no SQL Server/Oracle, no PowerShell automation, no PAM onboarding, no SOX/PCI (all preferred, not required). Tailored resume/cover letter built, cover letter discloses the PAM/AD gap up front. Applied 2026-09-19.",
+    "status": "rejected",
+    "reason": "REJECTED 2026-09-21 (denial received 2 days after applying 2026-09-19; no reason given). Found by Ryan on LinkedIn (not job-search-agent's own pipeline). Req R-2026-72162, remote (Nevada eligible), $73,600-$81,800. Verified live via Southwest's Workday (canApply true, ends 2026-09-22); careers.southwestair.com page showed \"closed\" at the same time (page lag, Workday is the source of truth). Entry-level IAM/PAM operations role. Real stretch: all required items met, but no CyberArk/Idira or SphereBoard, no AD/Entra ID, no SQL Server/Oracle, no PowerShell automation, no PAM onboarding, no SOX/PCI (all preferred, not required). Tailored resume/cover letter built, cover letter discloses the PAM/AD gap up front. Applied 2026-09-19.",
     "dateAdded": "2026-09-19"
   }
 ]
