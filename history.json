@@ -765,5 +765,77 @@
     "status": "rejected",
     "reason": "REJECTED 2026-09-21 (denial received 2 days after applying 2026-09-19; no reason given). Found by Ryan on LinkedIn (not job-search-agent's own pipeline). Req R-2026-72162, remote (Nevada eligible), $73,600-$81,800. Verified live via Southwest's Workday (canApply true, ends 2026-09-22); careers.southwestair.com page showed \"closed\" at the same time (page lag, Workday is the source of truth). Entry-level IAM/PAM operations role. Real stretch: all required items met, but no CyberArk/Idira or SphereBoard, no AD/Entra ID, no SQL Server/Oracle, no PowerShell automation, no PAM onboarding, no SOX/PCI (all preferred, not required). Tailored resume/cover letter built, cover letter discloses the PAM/AD gap up front. Applied 2026-09-19.",
     "dateAdded": "2026-09-19"
+  },
+  {
+    "company": "Eliassen Group",
+    "titleContains": [
+      "junior penetration tester"
+    ],
+    "status": "disqualified",
+    "reason": "One contract-to-hire W2 req (JN-092026-108605, $30-40/hr, remote US) syndicated ~17x on Adzuna under different city labels. Verified on careers.eliassen.com/9ulsOG: requires 3+ yrs IT (numeric years gate, see feedback-ats-experience-screening-questions), hands-on Burp Suite + Qualys, some pentest background, US citizen/PR able to obtain Public Trust. Not a fit.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "Columbia Advisory Group",
+    "titleContains": [
+      "incident response analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Requires professional hands-on IR experience, strong Windows endpoint investigation, AD/Entra ID/M365 identity-attack expertise, strong EDR (CrowdStrike preferred). Full-time remote $80-120k, but well beyond entry level. Checked 2026-09-21.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "Accendra Health",
+    "titleContains": [
+      "security incident response analyst"
+    ],
+    "status": "disqualified",
+    "reason": "REQ_26_70689 header says remote in Virginia / North Carolina only; Ryan is in Nevada so not eligible. Full page returned 403 to fetch, disqualified on the posting's own location restriction. $133-150k suggests mid/senior anyway.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "TEKEngineersInc",
+    "titleContains": [
+      "peoplesoft security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "6-month contract requiring PeopleSoft Campus Solutions, PeopleTools 8.52+, Oracle DB and SQL skills. Wrong domain (ERP security), not a fit.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "Acquisition Network",
+    "titleContains": [
+      "cybersecurity research analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Posted by Initio Capital ('hiring for this role and related opportunities across consulting, finance, product...'). Duties are market/investment research and target lists, not security work; no quals stated, project-based, Adzuna Easy Apply. Title is cybersecurity in name only. Checked 2026-09-21.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "PTR Global",
+    "titleContains": [
+      "vulnerability management analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Contract role (Job ID SYFJP00001328) is a 'Security Analyst III' in vuln management, i.e. senior tier. Full quals were truncated on Adzuna and not verified; disqualified on level. Re-check only if it resurfaces at a junior level.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "Projas Technologies",
+    "titleContains": [
+      "incident coordinator"
+    ],
+    "status": "disqualified",
+    "reason": "'Information Security Analyst 3 / Incident Coordinator' coordinating high-severity SOC incidents, 100% remote on EST hours, $120k. Senior tier and the page returned 403 so full quals were not verified; disqualified on level.",
+    "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "cybersheath",
+    "titleContains": [
+      "helpdesk technician i"
+    ],
+    "status": "disqualified",
+    "reason": "Verified on Greenhouse (5384993008), remote, $55-68k, open. Requires 1+ yr at an MSP AND 3+ yrs helpdesk with remote support tools/ConnectWise/RMM, plus AD/Group Policy competency. Numeric years gates, no paid IT history. Not a fit. Checked 2026-09-21.",
+    "dateAdded": "2026-09-21"
   }
 ]
