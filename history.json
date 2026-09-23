@@ -837,5 +837,41 @@
     "status": "disqualified",
     "reason": "Verified on Greenhouse (5384993008), remote, $55-68k, open. Requires 1+ yr at an MSP AND 3+ yrs helpdesk with remote support tools/ConnectWise/RMM, plus AD/Group Policy competency. Numeric years gates, no paid IT history. Not a fit. Checked 2026-09-21.",
     "dateAdded": "2026-09-21"
+  },
+  {
+    "company": "AGS - American Gaming Systems",
+    "titleContains": [
+      "security analyst"
+    ],
+    "status": "applied",
+    "reason": "Found by Ryan on LinkedIn (Easy Apply, not job-search-agent's own pipeline). Verified live via LinkedIn (verified-employer badge, working Easy Apply, job ID 4469030068); not yet visible on AGS's own Jobvite board (jobs.jobvite.com/agscareer), read as a sync delay given the board is otherwise actively maintained. Hybrid SOC+GRC role, Las Vegas NV on-site. Real stretch: posting requires 2+ yrs experience in a security analyst/SecOps/GRC/IT-ops role, which Ryan does not have in paid form (homelab + real estate risk/due-diligence background only); Security+ cert requirement met. Tailored resume/cover letter built, cover letter discloses the experience gap up front. Applied 2026-09-22 with desired salary $60-65K.",
+    "dateAdded": "2026-09-22"
+  },
+  {
+    "company": "Evolutyz Corp",
+    "titleContains": [
+      "soc analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna title says \"SOC Analyst\" but the description body is \"Sr. Security Analyst with SOC\": senior role owning advanced triage, detection maturity and incident analysis. Not entry-level.",
+    "dateAdded": "2026-09-22"
+  },
+  {
+    "company": "Robert Half",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna tags it remote-eligible, but it is a Pleasanton, CA contract role supporting employees \"in California\" with onsite duties. Wrong location for a Las Vegas candidate.",
+    "dateAdded": "2026-09-22"
+  },
+  {
+    "company": "Wynn Resorts",
+    "titleContains": [
+      "tech i - it ops center"
+    ],
+    "status": "disqualified",
+    "reason": "Title reads entry-level, but it requires 3+ yrs NOC, 5+ yrs IT customer service, 2+ yrs enterprise network monitoring, ITIL, and a networking/security cert.",
+    "dateAdded": "2026-09-22"
   }
 ]
