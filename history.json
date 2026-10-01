@@ -945,5 +945,14 @@
     "status": "unverified",
     "reason": "No first-party posting found and the iCIMS guess 404d. Labeled experienced. Suppressed to cut repeats; re-check if it shows up on ExamWorks careers.",
     "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "uvcyber",
+    "titleContains": [
+      "associate soc analyst"
+    ],
+    "status": "rejected",
+    "reason": "Ryan applied 2026-03-17 (outside job-search-agent) and was rejected 2026-08-17. Re-posted on Lever 2026-10-01 (f36583e7-763c-4fa8-9f1d-73d7a7074738, remote, $60-72k, MDR team). Suppressed so reposts of this req stop showing up as new.",
+    "dateAdded": "2026-10-01"
   }
 ]
