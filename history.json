@@ -453,9 +453,9 @@
       "analyst i",
       "cyber security"
     ],
-    "status": "expired",
-    "reason": "Analyst I - Cyber Security (req R25_0448) closed before Ryan submitted, despite fully-tailored materials being ready since 2026-07-23. If it resurfaces under a new req number for the same team/title, treat as a new lead, not a repeat of this dead posting.",
-    "dateAdded": "2026-07-29"
+    "status": "rejected",
+    "reason": "REJECTED, confirmed 2026-10-01 by Lauralee (they went a different route). Analyst I - Cyber Security: Ryan reached round 2 (9/2, HackTheBox phishing quiz 7/10); decision window passed 9/23 with no word; followed up 9/29. Earlier note: original req R25_0448 closed 2026-07-29 before submission. If a similar Sands cyber role resurfaces, treat it as a new lead and ask Ryan; his mentors Ben Bingham (Venetian VP) and Chuck Taylor are there.",
+    "dateAdded": "2026-10-01"
   },
   {
     "company": "UnitedHealth Group",
