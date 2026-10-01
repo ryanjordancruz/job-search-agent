@@ -873,5 +873,77 @@
     "status": "disqualified",
     "reason": "Title reads entry-level, but it requires 3+ yrs NOC, 5+ yrs IT customer service, 2+ yrs enterprise network monitoring, ITIL, and a networking/security cert.",
     "dateAdded": "2026-09-22"
+  },
+  {
+    "company": "Eliassen Group",
+    "titleContains": [
+      "workday security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Workday HCM security configuration/admin contract role, a different domain from SOC/security analysis.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "ZOLL",
+    "titleContains": [
+      "security grc analyst ii"
+    ],
+    "status": "disqualified",
+    "reason": "Requires 5+ yrs GRC experience.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "Kalosys",
+    "titleContains": [
+      "security engineer"
+    ],
+    "status": "disqualified",
+    "reason": "Senior engineering role, $125-150k.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "Old Dominion",
+    "titleContains": [
+      "security architect"
+    ],
+    "status": "disqualified",
+    "reason": "Senior architect role. One req syndicated across many city labels on Adzuna.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "Deloitte",
+    "titleContains": [
+      "biso analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Senior BISO role (GPS); recruiting closes 10/10/2026.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "GovCIO",
+    "titleContains": [
+      "data security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "Aristocrat",
+    "titleContains": [
+      "cyber security operations analyst"
+    ],
+    "status": "expired",
+    "reason": "Not on Aristocrat live Workday board (queried 2026-09-30); Adzuna listing is stale.",
+    "dateAdded": "2026-09-30"
+  },
+  {
+    "company": "ExamWorks",
+    "titleContains": [
+      "grc analyst"
+    ],
+    "status": "unverified",
+    "reason": "No first-party posting found and the iCIMS guess 404d. Labeled experienced. Suppressed to cut repeats; re-check if it shows up on ExamWorks careers.",
+    "dateAdded": "2026-09-30"
   }
 ]
