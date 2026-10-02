@@ -954,5 +954,104 @@
     "status": "applied",
     "reason": "APPLIED 2026-10-01 to reposted req (Lever f36583e7-763c-4fa8-9f1d-73d7a7074738, remote, $60-72k, MDR team). Tailored materials in Resumes/Claude Tailored/UltraViolet Cyber. Prior history: applied 2026-03-17 independently (before job-search-agent), rejected 2026-08-17.",
     "dateAdded": "2026-10-01"
+  },
+  {
+    "company": "World Wide Technology",
+    "titleContains": [
+      "security solutions analyst"
+    ],
+    "status": "disqualified",
+    "reason": "~$153k Las Vegas pre-sales security solutions role, senior-level by pay band and scope; not entry-level.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "SAIC",
+    "titleContains": [
+      "cloud information security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Scott AFB, requires active security clearance.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "Kforce",
+    "titleContains": [
+      "junior it support analyst"
+    ],
+    "status": "unverified",
+    "reason": "LA client, contract-to-hire, supports users 'remote and onsite'; almost certainly onsite in Los Angeles. Not found on kforce.com search.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "Affirm",
+    "titleContains": [
+      "analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Generic non-security analyst role (data/finance), 3+ yrs.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "WorkWave",
+    "titleContains": [
+      "data scientist"
+    ],
+    "status": "disqualified",
+    "reason": "Data science/ML role, not security.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "smartsheet",
+    "titleContains": [
+      "solutions architect"
+    ],
+    "status": "disqualified",
+    "reason": "Pre-sales solutions architect, not security, not entry-level.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "cybersheath",
+    "titleContains": [
+      "cloud operations engineer"
+    ],
+    "status": "disqualified",
+    "reason": "Requires 7+ years.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "cybersheath",
+    "titleContains": [
+      "account executive"
+    ],
+    "status": "disqualified",
+    "reason": "Sales role, 5+ yrs.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "Symmetrio",
+    "titleContains": [
+      "clinical applications"
+    ],
+    "status": "disqualified",
+    "reason": "Clinical/healthcare applications support, not security.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "Saalex",
+    "titleContains": [
+      "data integrity engineer"
+    ],
+    "status": "disqualified",
+    "reason": "Avionics software data analysis, Lexington Park MD, not security.",
+    "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "Saalex",
+    "titleContains": [
+      "junior systems administrator"
+    ],
+    "status": "disqualified",
+    "reason": "Lexington Park MD onsite (Navy base), clearance-eligible, not remote despite tag.",
+    "dateAdded": "2026-10-02"
   }
 ]
