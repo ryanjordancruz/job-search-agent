@@ -27,6 +27,22 @@ function toYears(numToken) {
   return NUMBER_WORDS[numToken] ?? null;
 }
 
+// Phrases that follow "N years (of)" when a posting describes the employer's
+// own age or track record rather than a candidate requirement.
+const COMPANY_HISTORY_AFTER =
+  /^\s*(?:of\s+)?(?:excellence|history|heritage|legacy|service|serving|success|innovation|growth|leadership|track record|in business|in the industry|delivering|providing|helping|partnering)\b/;
+
+// True when an "N years" match is about the employer, not the candidate.
+// No real entry-to-mid requirement runs past 15 years, so anything above
+// that is treated as company history too.
+function isCompanyHistory(text, index) {
+  const m = text.slice(index).match(/^(\d{1,2}|[a-z]+)\s*\+?\s*years?['’]?/);
+  if (!m) return false; // "minimum of N" / "at least N" forms are always requirements
+  const n = toYears(m[1]);
+  if (n !== null && n > 15) return true;
+  return COMPANY_HISTORY_AFTER.test(text.slice(index + m[0].length, index + m[0].length + 40));
+}
+
 // Looks for patterns like "3+ years", "5-7 years", "minimum of 2 years",
 // "five years' experience" and returns every distinct requirement found
 // (deduped by position), not just one number. Postings routinely stack
@@ -53,6 +69,10 @@ export function extractExperienceRequirements(description) {
     while ((m = re.exec(text)) !== null) {
       const n = toYears(m[1]);
       if (n === null) continue;
+      // Skip the company describing its own age, e.g. CAI's boilerplate
+      // "we have over 40 years of excellence", which the bare "N years of"
+      // pattern otherwise reads as a 40-year candidate requirement.
+      if (isCompanyHistory(text, m.index)) continue;
       // dedupe overlapping matches from different patterns describing the
       // same requirement (e.g. "minimum of" and the bare "N years experience"
       // pattern both matching "a minimum of five years' experience...", just
