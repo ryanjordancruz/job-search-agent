@@ -1053,5 +1053,15 @@
     "status": "disqualified",
     "reason": "Lexington Park MD onsite (Navy base), clearance-eligible, not remote despite tag.",
     "dateAdded": "2026-10-02"
+  },
+  {
+    "company": "Deloitte",
+    "titleContains": [
+      "cyber operate soc l1",
+      "managed services engineer ii"
+    ],
+    "status": "applied",
+    "reason": "APPLIED 2026-10-03 via apply.deloitte.com req 369279, \"Cyber Operate SOC L1 Analyst - Consultant\" (job description calls it Managed Services Engineer II). Las Vegas hybrid (50% office), rotating 24/7 shifts, $82.6k-$162.8k. Found on LinkedIn. Stretch: requires 1+ yrs cybersecurity/secops. Tailored materials in Resumes/Claude Tailored/Deloitte.",
+    "dateAdded": "2026-10-03"
   }
 ]
