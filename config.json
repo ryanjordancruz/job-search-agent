@@ -67,7 +67,7 @@
       "Senior", "Sr", "Staff", "Principal", "Manager", "Director",
       "Lead", "VP", "Vice President", "Head of",
       "Officer", "Guard", "Loss Prevention", "Unarmed", "Armed",
-      "Dispatcher", "Patrol"
+      "Dispatcher", "Patrol", "Perimeter", "Professor", "Lecturer", "Faculty"
     ]
   },
   "search": {
@@ -107,6 +107,16 @@
     "greenhouseBoards": ["versprite", "cybersheath", "smartsheet", "onepath", "tactacam"],
     "leverBoards": ["uvcyber", "contentsquare"],
     "smartrecruitersCompanies": ["WynnResorts"],
+    "neogovAgencies": ["lasvegas", "clarkcounty", "henderson", "lvmpd", "lvcva", "umcsn", "cleanwaterteam", "rtc", "bcnv", "mesquitenv"],
+    "workdayBoards": [
+      { "host": "nshe.wd1.myworkdayjobs.com", "tenant": "nshe", "site": "UNLV-External", "company": "UNLV" }
+    ],
+    "workdayExtraQueries": ["information technology", "cyber", "network"],
+    "workdayTitleKeywords": [
+      "security", "cyber", "cybersecurity", "soc", "vulnerability", "incident", "compliance", "grc",
+      "information technology", "it", "network", "systems", "computer", "technology", "technician",
+      "help desk", "helpdesk", "service desk", "desktop support", "noc"
+    ],
     "workableAccounts": ["techflow", "first-division-consulting", "infystrat", "symmetrio", "obrela-security-industries-sa", "sigmadefense", "saalex", "evolve-security", "sphynx"]
   }
 }

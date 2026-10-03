@@ -10,6 +10,8 @@ import { searchGreenhouse } from "./sources/greenhouse.js";
 import { searchLever } from "./sources/lever.js";
 import { searchSmartrecruiters } from "./sources/smartrecruiters.js";
 import { searchWorkable } from "./sources/workable.js";
+import { searchNeogov } from "./sources/neogov.js";
+import { searchWorkday } from "./sources/workday.js";
 import { scorePosting } from "./score.js";
 import { loadHistory, findHistoryMatch } from "./history.js";
 
@@ -96,6 +98,19 @@ async function collectAll() {
     const wk = await searchWorkable(subdomain);
     if (wk.skipped) notes.push(`[Workable] ${wk.reason}`);
     all.push(...wk.results);
+  }
+
+  for (const agency of search.neogovAgencies ?? []) {
+    const ng = await searchNeogov(agency);
+    if (ng.skipped) notes.push(`[NEOGOV] ${ng.reason}`);
+    all.push(...ng.results);
+  }
+
+  for (const board of search.workdayBoards ?? []) {
+    const wdQueries = [...search.queries, ...(search.workdayExtraQueries ?? [])];
+    const wd = await searchWorkday(board, wdQueries, search.workdayTitleKeywords ?? []);
+    if (wd.skipped) notes.push(`[Workday] ${wd.reason}`);
+    all.push(...wd.results);
   }
 
   // dedupe notes
