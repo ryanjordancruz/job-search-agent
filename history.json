@@ -1072,5 +1072,23 @@
     "status": "disqualified",
     "reason": "Onsite NYC desk-side support (Midtown + boroughs), $44-50/hr, 35 hr/wk. Adzuna remote tag is wrong; Ryan is in NV.",
     "dateAdded": "2026-10-03"
+  },
+  {
+    "company": "CAI",
+    "titleContains": [
+      "cloud security analyst intern"
+    ],
+    "status": "disqualified",
+    "reason": "R8668, part-time remote $20/hr simulated-AWS internship. Requires AWS/cloud knowledge; Ryan has no AWS experience and chose to skip (2026-10-03).",
+    "dateAdded": "2026-10-03"
+  },
+  {
+    "company": "CAI",
+    "titleContains": [
+      "cybersecurity analyst intern"
+    ],
+    "status": "expired",
+    "reason": "R8655/R8656 pulled from Workday by 2026-10-03 (403), so the Adzuna copies are stale. Only live req is R8488: onsite Irvine CA, summer 2027, current junior with 3.5 GPA. DQ.",
+    "dateAdded": "2026-10-03"
   }
 ]
