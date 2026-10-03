@@ -1090,5 +1090,14 @@
     "status": "expired",
     "reason": "R8655/R8656 pulled from Workday by 2026-10-03 (403), so the Adzuna copies are stale. Only live req is R8488: onsite Irvine CA, summer 2027, current junior with 3.5 GPA. DQ.",
     "dateAdded": "2026-10-03"
+  },
+  {
+    "company": "onepath",
+    "titleContains": [
+      "service desk analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Greenhouse 4600601007 (remote) + 5203200007 (Columbus in-office). Required MSP-experience screening question is a likely knockout; Ryan chose to skip (2026-10-03).",
+    "dateAdded": "2026-10-03"
   }
 ]
