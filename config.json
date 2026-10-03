@@ -16,7 +16,22 @@
       "Compliance Analyst",
       "GRC Analyst",
       "Junior Penetration Tester",
-      "IT Support Analyst"
+      "IT Support Analyst",
+      "IT Support Specialist",
+      "IT Support Technician",
+      "Help Desk Analyst",
+      "Help Desk Technician",
+      "Help Desk Specialist",
+      "Service Desk Analyst",
+      "Service Desk Technician",
+      "Desktop Support Technician",
+      "NOC Analyst",
+      "NOC Technician",
+      "Network Operations Center Technician"
+    ],
+    "bridgeTitleTerms": [
+      "help desk", "helpdesk", "service desk", "desktop support",
+      "it support", "noc", "network operations center"
     ],
     "location": {
       "onsiteRadiusMiles": 20,
@@ -67,7 +82,12 @@
       "compliance analyst",
       "GRC analyst",
       "junior penetration tester",
-      "IT support analyst"
+      "IT support analyst",
+      "help desk analyst",
+      "service desk analyst",
+      "NOC analyst",
+      "IT support specialist",
+      "desktop support technician"
     ],
     "queryLocations": ["Las Vegas, NV", "Nevada", "Remote", ""],
     "adzuna": {

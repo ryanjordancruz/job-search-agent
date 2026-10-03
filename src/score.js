@@ -237,7 +237,14 @@ const DAY_SCHEDULE_PATTERN = /\d+\s*days?\s*(?:onsite|on-site|in[\s-]office|in\s
 // is describing remote *support/users/sites* the role serves, not the
 // position's own work arrangement — e.g. "Remote support", "remote users",
 // "remote locations". Used in scorePosting's description-body remote check.
-const REMOTE_SUPPORT_CONTEXT = /^[\s:-]*(support|troubleshooting|assistance|access|help\s*desk|users?|workers?|employees?|clients?|customers?|locations?|sites?|offices?|branches?|teams?|colleagues?)\b/i;
+const REMOTE_SUPPORT_CONTEXT = /^[\s:-]*(support|troubleshooting|assistance|access|help\s*desk|users?|workers?|employees?|clients?|customers?|locations?|sites?|offices?|branches?|teams?|colleagues?|environments?|desktop|sessions?|connections?)\b/i;
+// "remote" as one item in a list of support channels/environments on a
+// desktop-support or help desk req, e.g. "local and remote environments" or
+// "support through phone, remote, and onsite assistance". Deliberately does
+// not cover "onsite or remote", which usually offers the position itself as
+// remote. Caught 2026-10-03 on Ovation Desktop Support and Blaze CU Help Desk.
+const REMOTE_LIST_BEFORE = /\b(phone|email|chat|local)\s*(,|and|\/)\s*$/i;
+const REMOTE_LIST_AFTER = /^\s*,?\s*(and|or|\/)\s+(on-?site|in-person|in person|local)\s+(support|assistance|environments?|help)\b/i;
 
 export function detectHybridSchedule(title, description) {
   const text = `${norm(title)} ${norm(description)}`;
@@ -408,6 +415,7 @@ export function scorePosting(posting, profile) {
       if (/\b(not|no|non-|isn't|won't be|without)\s*$/.test(before)) continue;
       const after = desc.slice(m.index + m[0].length, m.index + m[0].length + 25);
       if (REMOTE_SUPPORT_CONTEXT.test(after)) continue;
+      if (REMOTE_LIST_BEFORE.test(before) || REMOTE_LIST_AFTER.test(after)) continue;
       return true;
     }
     return false;
@@ -463,6 +471,26 @@ export function scorePosting(posting, profile) {
     score += 15;
   } else if (isAmbiguousTitleHit) {
     flags.push("Title reads as compliance/GRC but no security skills/frameworks matched — likely a non-security compliance role (banking/tax/HR)");
+  }
+
+  // Bridge roles (help desk / service desk / NOC) aren't security jobs, but a
+  // year in one turns the "1+ years experience" ATS knockout questions into
+  // an honest yes. Flag them so they read as a deliberate target, not noise.
+  const isBridgeRole = !hasSecurityTitleTerm &&
+    (profile.bridgeTitleTerms ?? []).some((t) => containsTerm(title, t));
+  if (isBridgeRole && titleHit) {
+    flags.push("Bridge role (help desk/NOC/IT support) — builds the paid IT experience that knockout questions ask for");
+  }
+
+  // Freshness: AI phone screens and recruiter queues favor early applicants,
+  // so reward postings under 48 hours old. Adzuna re-dates stale syndicated
+  // listings (see Summit 7 in project memory), so its dates get a caveat.
+  const ageDays = posting.postedDate ? (Date.now() - Date.parse(posting.postedDate)) / 86_400_000 : NaN;
+  if (ageDays >= 0 && ageDays <= 2) {
+    score += 10;
+    flags.push(posting.source === "Adzuna"
+      ? "Posted <48h ago per Adzuna (dates can be re-syndicated, confirm on employer site) — apply today"
+      : "Posted <48h ago — apply today");
   }
 
   // Certification match

@@ -17,7 +17,9 @@ export async function searchGreenhouse(boardToken) {
     location: j.location?.name ?? "",
     url: j.absolute_url,
     description: (j.content ?? "").replace(/<[^>]+>/g, ""),
-    postedDate: j.updated_at ?? null,
+    // first_published, not updated_at: any edit bumps updated_at, which made
+    // a year-old evergreen req (onepath 4600601007) look freshly posted.
+    postedDate: j.first_published ?? j.updated_at ?? null,
     salaryMin: null,
     salaryMax: null,
   }));

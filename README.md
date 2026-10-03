@@ -45,6 +45,7 @@ Postings that scored well but turned out to be dead ends after a manual careers-
 
 Edit `config.json`:
 - `candidate.targetTitles` — job titles you're aiming for
+- `candidate.bridgeTitleTerms` — help desk / service desk / NOC title words; matching postings get a "Bridge role" flag (a year in one turns "1+ years experience" screening questions into an honest yes)
 - `candidate.skills` — keywords to match against posting descriptions
 - `candidate.certifications` — certs to match
 - `candidate.stateAbbreviation` — used to catch postings that explicitly exclude your state
