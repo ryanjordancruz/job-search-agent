@@ -1063,5 +1063,14 @@
     "status": "applied",
     "reason": "APPLIED 2026-10-03 via apply.deloitte.com req 369279, \"Cyber Operate SOC L1 Analyst - Consultant\" (job description calls it Managed Services Engineer II). Las Vegas hybrid (50% office), rotating 24/7 shifts, $82.6k-$162.8k. Found on LinkedIn. Stretch: requires 1+ yrs cybersecurity/secops. Tailored materials in Resumes/Claude Tailored/Deloitte.",
     "dateAdded": "2026-10-03"
+  },
+  {
+    "company": "Weill Cornell Medical College",
+    "titleContains": [
+      "it support analyst ii"
+    ],
+    "status": "disqualified",
+    "reason": "Onsite NYC desk-side support (Midtown + boroughs), $44-50/hr, 35 hr/wk. Adzuna remote tag is wrong; Ryan is in NV.",
+    "dateAdded": "2026-10-03"
   }
 ]
