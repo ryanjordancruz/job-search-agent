@@ -1099,5 +1099,15 @@
     "status": "disqualified",
     "reason": "Greenhouse 4600601007 (remote) + 5203200007 (Columbus in-office). Required MSP-experience screening question is a likely knockout; Ryan chose to skip (2026-10-03).",
     "dateAdded": "2026-10-03"
+  },
+  {
+    "company": "Clark County",
+    "titleContains": [
+      "management analyst",
+      "cybersecurity risk"
+    ],
+    "status": "applied",
+    "reason": "APPLIED 2026-10-03 via GovernmentJobs (NEOGOV) job #31876, Management Analyst I/II (Cybersecurity Risk & Compliance), county IT GRC team, $33.65-49.74/hr (MA I). Closes 10/13/2026. Qualifies via UNLV business degree. Tailored materials in Resumes/Claude Tailored/Clark County.",
+    "dateAdded": "2026-10-03"
   }
 ]
