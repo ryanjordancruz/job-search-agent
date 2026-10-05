@@ -1060,8 +1060,8 @@
       "cyber operate soc l1",
       "managed services engineer ii"
     ],
-    "status": "applied",
-    "reason": "APPLIED 2026-10-03 via apply.deloitte.com req 369279, \"Cyber Operate SOC L1 Analyst - Consultant\" (job description calls it Managed Services Engineer II). Las Vegas hybrid (50% office), rotating 24/7 shifts, $82.6k-$162.8k. Found on LinkedIn. Stretch: requires 1+ yrs cybersecurity/secops. Tailored materials in Resumes/Claude Tailored/Deloitte.",
+    "status": "rejected",
+    "reason": "REJECTED 2026-10-05, two days after applying 10/3 via apply.deloitte.com req 369279 (Cyber Operate SOC L1 Analyst - Consultant / Managed Services Engineer II, Las Vegas hybrid). A fast rejection fits the 1+ yrs cybersecurity/secops requirement acting as a knockout. APPLIED 2026-10-03 via apply.deloitte.com req 369279, \"Cyber Operate SOC L1 Analyst - Consultant\" (job description calls it Managed Services Engineer II). Las Vegas hybrid (50% office), rotating 24/7 shifts, $82.6k-$162.8k. Found on LinkedIn. Stretch: requires 1+ yrs cybersecurity/secops. Tailored materials in Resumes/Claude Tailored/Deloitte.",
     "dateAdded": "2026-10-03"
   },
   {
@@ -1181,6 +1181,15 @@
     ],
     "status": "disqualified",
     "reason": "Radio/network engineering role, ~3+ yrs required, not security. Keyword noise.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "Deloitte",
+    "titleContains": [
+      "detection engineer"
+    ],
+    "status": "disqualified",
+    "reason": "Cyber Operate Detection Engineer - Consultant (LV, $160k). Same Consultant tier as req 369279, which rejected the candidate within 2 days on 10/5; detection engineering sits above L1 SOC. Not worth applying.",
     "dateAdded": "2026-10-05"
   }
 ]
