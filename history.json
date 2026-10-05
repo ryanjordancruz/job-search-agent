@@ -1109,5 +1109,78 @@
     "status": "applied",
     "reason": "APPLIED 2026-10-03 via GovernmentJobs (NEOGOV) job #31876, Management Analyst I/II (Cybersecurity Risk & Compliance), county IT GRC team, $33.65-49.74/hr (MA I). Closes 10/13/2026. Qualifies via UNLV business degree. Tailored materials in Resumes/Claude Tailored/Clark County.",
     "dateAdded": "2026-10-03"
+  },
+  {
+    "company": "INSPYR Solutions",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Adzuna tags it remote, but it is a 12-month Orlando, FL field-tech contract ($20-26/hr) serving as onsite IT contact for the Orlando market. Wrong location.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "IT Associates",
+    "titleContains": [
+      "it support analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Staffing-agency req for an autism-care client in Nashville, TN: 80% remote but 20% local travel, so it needs a Nashville-area candidate. Wrong location.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "CAI",
+    "titleContains": [
+      "bilingual",
+      "service desk"
+    ],
+    "status": "disqualified",
+    "reason": "Bilingual Service Desk reqs (Spanish/English and English/Turkish) require fluency in a second language the candidate does not have. Noted 10/3, logged 10/5.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "SAIC",
+    "titleContains": [
+      "service desk analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Colorado Springs service desk, requires an active security clearance.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "STR",
+    "titleContains": [
+      "it support specialist"
+    ],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "FastSpring",
+    "titleContains": [
+      "payment operations"
+    ],
+    "status": "disqualified",
+    "reason": "Payments ops role, not security or IT support. Keyword noise.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "City of Henderson",
+    "titleContains": [
+      "systems engineer ii"
+    ],
+    "status": "disqualified",
+    "reason": "Senior systems engineering role, not a security analyst or bridge role. Keyword noise.",
+    "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "Las Vegas Metropolitan Police",
+    "titleContains": [
+      "radio systems network analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Radio/network engineering role, ~3+ yrs required, not security. Keyword noise.",
+    "dateAdded": "2026-10-05"
   }
 ]
