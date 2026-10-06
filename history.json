@@ -696,7 +696,8 @@
     "company": "Perennial Resources International",
     "titleContains": [
       "application vulnerability analyst",
-      "owasp"
+      "owasp",
+      "application security vulnerability analyst"
     ],
     "status": "disqualified",
     "reason": "Real, live 6+ month contract (via freehire.me mirror) for a Midtown Manhattan client, remote but requires EST hours, US citizen/green-card only (no visa sponsorship). $120k salary and industry-wide norms for this AppSec/SAST-DAST-SCA job family (5+ years typical) both point to a mid/senior role behind a generic-sounding title - same shape as ReliaQuest/SAIC/GAMA-1. Exact years text was truncated in every source found, so not 100% confirmed, but strongly leaning disqualify.",
@@ -1191,5 +1192,23 @@
     "status": "disqualified",
     "reason": "Cyber Operate Detection Engineer - Consultant (LV, $160k). Same Consultant tier as req 369279, which rejected the candidate within 2 days on 10/5; detection engineering sits above L1 SOC. Not worth applying.",
     "dateAdded": "2026-10-05"
+  },
+  {
+    "company": "Catapult Solutions Group",
+    "titleContains": [
+      "it service desk analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Remote PST contract at $29/hr. First seen 8/15/2026, and Adzuna re-syndicated it as <48h on 10/6. LinkedIn req 4448207173 now redirects to search, so it is likely closed. Requires paid service desk background, AD, and ServiceNow.",
+    "dateAdded": "2026-10-06"
+  },
+  {
+    "company": "Anonymous Employer",
+    "titleContains": [
+      "digital forensic analyst with security clearance"
+    ],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-10-06"
   }
 ]
