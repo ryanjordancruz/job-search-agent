@@ -1210,5 +1210,14 @@
     "status": "disqualified",
     "reason": "Requires an active security clearance.",
     "dateAdded": "2026-10-06"
+  },
+  {
+    "company": "Wynn",
+    "titleContains": [
+      "data security"
+    ],
+    "status": "applied",
+    "reason": "Applied 2026-10-06 to \"Analyst - Data Security\" (SmartRecruiters 744000153564789, Las Vegas) via SmartRecruiters. The form had no cover letter upload, so the cover letter went into the message-to-hiring-team field. Screening questions likely knock the application out: education/experience answered honestly as \"No formal IT education\", and no PCI, Microsoft Purview DLP, or large-enterprise experience. Ben Bingham is contacting his Wynn contact for a referral. Adzuna also lists it as \"Wynn Las Vegas\".",
+    "dateAdded": "2026-10-06"
   }
 ]
