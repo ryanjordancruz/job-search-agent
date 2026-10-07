@@ -1219,5 +1219,78 @@
     "status": "applied",
     "reason": "Applied 2026-10-06 to \"Analyst - Data Security\" (SmartRecruiters 744000153564789, Las Vegas) via SmartRecruiters. The form had no cover letter upload, so the cover letter went into the message-to-hiring-team field. Screening questions likely knock the application out: education/experience answered honestly as \"No formal IT education\", and no PCI, Microsoft Purview DLP, or large-enterprise experience. Ben Bingham is contacting his Wynn contact for a referral. Adzuna also lists it as \"Wynn Las Vegas\".",
     "dateAdded": "2026-10-06"
+  },
+  {
+    "company": "Effortless Office",
+    "titleContains": [
+      "noc analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Verified on employer ATS (applytojob) 10/7: requires 3-7 yrs IT/help desk/MSP, MS-102 M365 Admin cert, and Net+ or CCNA. Remote, Tue-Sat 7pm-4am PT, ~$25-29/hr. Adzuna lists it 3x under LV/Enterprise.",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "Variety Wholesalers",
+    "titleContains": [
+      "help desk"
+    ],
+    "status": "disqualified",
+    "reason": "Henderson, Vance County = Henderson, NC, not Henderson, NV. Geo false positive; onsite.",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "Mercor",
+    "titleContains": [
+      "incident response analyst",
+      "ai trainer"
+    ],
+    "status": "disqualified",
+    "reason": "Contract paid expert interviews for experienced SOC/IR practitioners, not an employment role; needs real practitioner experience.",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "Huntsville Memorial Hospital",
+    "titleContains": [
+      "desktop support"
+    ],
+    "status": "disqualified",
+    "reason": "Onsite hospital desktop support in Huntsville, TX; remote flag came from \"remote technical assistance\" support-channel wording.",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "gTANGIBLE",
+    "titleContains": [
+      "security analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance.",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "VivSoft",
+    "titleContains": [
+      "help desk"
+    ],
+    "status": "disqualified",
+    "reason": "Requires an active security clearance (Herndon, VA).",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "Tenable",
+    "titleContains": [
+      "salesforce developer"
+    ],
+    "status": "disqualified",
+    "reason": "Not a security role (Salesforce dev, 5+ yrs).",
+    "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "Doximity",
+    "titleContains": [
+      "data scientist"
+    ],
+    "status": "disqualified",
+    "reason": "Not a security role.",
+    "dateAdded": "2026-10-07"
   }
 ]
