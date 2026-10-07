@@ -1292,5 +1292,16 @@
     "status": "disqualified",
     "reason": "Not a security role.",
     "dateAdded": "2026-10-07"
+  },
+  {
+    "company": "WOCS",
+    "titleContains": [
+      "help desk",
+      "it tech",
+      "field tech"
+    ],
+    "status": "skipped",
+    "reason": "Skipped by Ryan 2026-10-07: IT field tech for a Wendy's franchisee (198 locations, 9 states), ~$20-25/hr; requires own car, air travel, weekend on-call, roof access. Travel scope unspecified and conflicts with school pickup/family schedule. Recurring repost since ~Feb 2026.",
+    "dateAdded": "2026-10-07"
   }
 ]
