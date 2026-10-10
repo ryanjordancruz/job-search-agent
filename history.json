@@ -1340,5 +1340,50 @@
     "status": "disqualified",
     "reason": "Not a security role, 4+ yrs required.",
     "dateAdded": "2026-10-08"
+  },
+  {
+    "company": "Racing For Recovery",
+    "titleContains": [
+      "videographer"
+    ],
+    "status": "disqualified",
+    "reason": "Onsite in Holland, OH; mostly videographer/content role, not IT/security.",
+    "dateAdded": "2026-10-10"
+  },
+  {
+    "company": "ASRC Federal",
+    "titleContains": [
+      "soc analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Requires active Secret clearance.",
+    "dateAdded": "2026-10-10"
+  },
+  {
+    "company": "Feuji",
+    "titleContains": [
+      "service desk analyst"
+    ],
+    "status": "disqualified",
+    "reason": "St. Louis-local preferred, travel required for onsite hypercare at integration sites.",
+    "dateAdded": "2026-10-10"
+  },
+  {
+    "company": "Upstart",
+    "titleContains": [
+      "applied scientist"
+    ],
+    "status": "disqualified",
+    "reason": "Noise: not a security role.",
+    "dateAdded": "2026-10-10"
+  },
+  {
+    "company": "PerfectServe",
+    "titleContains": [
+      "qa engineer"
+    ],
+    "status": "disqualified",
+    "reason": "Noise: not a security role.",
+    "dateAdded": "2026-10-10"
   }
 ]
