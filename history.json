@@ -1385,5 +1385,50 @@
     "status": "disqualified",
     "reason": "Noise: not a security role.",
     "dateAdded": "2026-10-10"
+  },
+  {
+    "company": "Cherokee Federal",
+    "titleContains": [
+      "cybersecurity analyst"
+    ],
+    "status": "disqualified",
+    "reason": "ITS262 Privacy & Training (remote, ~$115-117k): requires 3-5+ yrs cybersecurity/privacy/GRC plus federal privacy (PTA/PIA/SORN/FISMA) knowledge and Public Trust. Above the 2-yr bar.",
+    "dateAdded": "2026-10-16"
+  },
+  {
+    "company": "Select Source Solutions",
+    "titleContains": [
+      "aws security"
+    ],
+    "status": "disqualified",
+    "reason": "Senior hands-on AWS cloud security specialist for federal systems; well above entry level.",
+    "dateAdded": "2026-10-16"
+  },
+  {
+    "company": "Hire IT People",
+    "titleContains": [
+      "help desk analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Trenton NJ 6-month contract, onsite for training; stacked 2-3 yr requirements.",
+    "dateAdded": "2026-10-16"
+  },
+  {
+    "company": "The HT Group",
+    "titleContains": [
+      "it support specialist"
+    ],
+    "status": "disqualified",
+    "reason": "Durham NC, posting says it will need to be onsite despite remote tag.",
+    "dateAdded": "2026-10-16"
+  },
+  {
+    "company": "Dexian",
+    "titleContains": [
+      "help desk analyst"
+    ],
+    "status": "disqualified",
+    "reason": "Topeka KS help desk with occasional hands-on support, so effectively local/onsite despite remote tag.",
+    "dateAdded": "2026-10-16"
   }
 ]
